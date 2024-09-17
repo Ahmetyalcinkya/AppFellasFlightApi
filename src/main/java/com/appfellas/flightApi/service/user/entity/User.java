@@ -2,7 +2,6 @@ package com.appfellas.flightApi.service.user.entity;
 
 import com.appfellas.flightApi.core.enums.Role;
 import com.appfellas.flightApi.service.flight.entity.Flight;
-import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.DBRef;

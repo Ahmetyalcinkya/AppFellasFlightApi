@@ -5,3 +5,7 @@ spring:
     mongodb:
       uri: mongodb://localhost:27017
       database: appFellasDb
+server:
+  port: 8080
+  servlet:
+    context-path: /AppFellas/api/v1

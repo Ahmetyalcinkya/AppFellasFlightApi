@@ -9,6 +9,8 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -25,6 +27,14 @@ public class UserService {
 
     public User findByEmail(String email) {
         return mongoTemplate.findOne(Query.query(Criteria.where("email").is(email)), User.class);
+    }
+
+    public User findById(String id) {
+        return userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+    }
+
+    public List<User> findAll(){
+        return userRepository.findAll();
     }
 
     public void save(UserInput user){
