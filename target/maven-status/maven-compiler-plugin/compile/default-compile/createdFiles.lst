@@ -1,0 +1,4 @@
+com/appfellas/flightApi/FlightApiApplication.class
+com/appfellas/flightApi/service/flight/entity/Flight.class
+com/appfellas/flightApi/core/enums/Role.class
+com/appfellas/flightApi/service/user/entity/User.class
