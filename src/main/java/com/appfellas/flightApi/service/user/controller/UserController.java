@@ -1,7 +1,7 @@
 package com.appfellas.flightApi.service.user.controller;
 
-import com.appfellas.flightApi.service.user.dto.UserInput;
-import com.appfellas.flightApi.service.user.dto.UserResponse;
+import com.appfellas.flightApi.service.user.dto.input.UserInput;
+import com.appfellas.flightApi.service.user.dto.response.UserResponse;
 import com.appfellas.flightApi.service.user.service.UserService;
 import com.appfellas.flightApi.util.EntityMapper;
 import org.springframework.beans.factory.annotation.Autowired;

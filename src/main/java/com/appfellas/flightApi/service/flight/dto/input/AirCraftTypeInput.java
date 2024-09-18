@@ -1,4 +1,4 @@
-package com.appfellas.flightApi.service.flight.dto;
+package com.appfellas.flightApi.service.flight.dto.input;
 
 public class AirCraftTypeInput {
 

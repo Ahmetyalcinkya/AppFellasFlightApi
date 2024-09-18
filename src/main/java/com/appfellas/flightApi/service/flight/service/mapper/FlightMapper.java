@@ -2,7 +2,7 @@ package com.appfellas.flightApi.service.flight.service.mapper;
 
 import com.appfellas.flightApi.core.dao.mapper.BaseMapper;
 import com.appfellas.flightApi.core.enums.FlightDirection;
-import com.appfellas.flightApi.service.flight.dto.FlightInput;
+import com.appfellas.flightApi.service.flight.dto.input.FlightInput;
 import com.appfellas.flightApi.service.flight.entity.Flight;
 import com.appfellas.flightApi.service.user.entity.User;
 import com.appfellas.flightApi.service.user.service.UserService;

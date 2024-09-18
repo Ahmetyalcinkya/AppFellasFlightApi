@@ -1,4 +1,4 @@
-package com.appfellas.flightApi.service.user.dto;
+package com.appfellas.flightApi.service.user.dto.input;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Size;

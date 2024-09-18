@@ -36,6 +36,7 @@ public class Flight {
     private Integer capacity;
     @DBRef
     private Airport airport;
+    private Integer terminal;
     @DBRef
     private Airline airline;
     private FlightRoute route;
@@ -166,6 +167,14 @@ public class Flight {
 
     public void setAirport(Airport airport) {
         this.airport = airport;
+    }
+
+    public Integer getTerminal() {
+        return terminal;
+    }
+
+    public void setTerminal(Integer terminal) {
+        this.terminal = terminal;
     }
 
     public Airline getAirline() {

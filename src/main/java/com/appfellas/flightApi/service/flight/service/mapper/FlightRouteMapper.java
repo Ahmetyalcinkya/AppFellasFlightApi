@@ -1,7 +1,7 @@
 package com.appfellas.flightApi.service.flight.service.mapper;
 
 import com.appfellas.flightApi.core.dao.mapper.BaseCreateMapper;
-import com.appfellas.flightApi.service.flight.dto.FlightRouteInput;
+import com.appfellas.flightApi.service.flight.dto.input.FlightRouteInput;
 import com.appfellas.flightApi.service.flight.entity.embeddable.FlightRoute;
 import org.springframework.stereotype.Component;
 

@@ -1,8 +1,8 @@
-package com.appfellas.flightApi.service.user.service;
+package com.appfellas.flightApi.service.user.service.mapper;
 
 import com.appfellas.flightApi.core.dao.mapper.BaseMapper;
 import com.appfellas.flightApi.core.enums.Role;
-import com.appfellas.flightApi.service.user.dto.UserInput;
+import com.appfellas.flightApi.service.user.dto.input.UserInput;
 import com.appfellas.flightApi.service.user.entity.User;
 import org.springframework.stereotype.Component;
 

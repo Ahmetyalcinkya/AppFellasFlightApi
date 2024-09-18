@@ -1,13 +1,9 @@
-package com.appfellas.flightApi.service.airport.entity;
+package com.appfellas.flightApi.service.airport.dto.response;
 
 import com.appfellas.flightApi.service.airport.entity.embeddable.Address;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "airport")
-public class Airport {
+public class AirportResponse {
 
-    @Id
     private String id;
     private String name;
     private String IATACode;

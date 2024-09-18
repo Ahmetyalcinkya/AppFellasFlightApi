@@ -1,8 +1,9 @@
 package com.appfellas.flightApi.service.user.service;
 
-import com.appfellas.flightApi.service.user.dto.UserInput;
+import com.appfellas.flightApi.service.user.dto.input.UserInput;
 import com.appfellas.flightApi.service.user.entity.User;
 import com.appfellas.flightApi.service.user.repository.UserRepository;
+import com.appfellas.flightApi.service.user.service.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
@@ -46,12 +47,10 @@ public class UserService {
     }
 
     public void update(String id, UserInput input){
-        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
-        userRepository.save(userMapper.updateEntity(user, input));
+        userRepository.save(userMapper.updateEntity(findById(id), input));
     }
 
     public void delete(String id) {
-        User user = userRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
-        userRepository.delete(user);
+        userRepository.delete(findById(id));
     }
 }

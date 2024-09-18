@@ -1,4 +1,4 @@
-package com.appfellas.flightApi.service.user.dto;
+package com.appfellas.flightApi.service.user.dto.response;
 
 public class UserResponse {
 
