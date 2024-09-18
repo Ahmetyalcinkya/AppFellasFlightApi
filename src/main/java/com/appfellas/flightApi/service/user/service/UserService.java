@@ -37,6 +37,10 @@ public class UserService {
         return userRepository.findAll();
     }
 
+    public List<User> findAllByIds(List<String> ids){
+        return ids.stream().map(id -> mongoTemplate.findById(id, User.class)).toList();
+    }
+
     public void save(UserInput user){
         userRepository.save(userMapper.createEntity(user));
     }

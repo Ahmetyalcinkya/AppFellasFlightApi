@@ -1,59 +1,35 @@
-package com.appfellas.flightApi.service.flight.entity;
-
-import com.appfellas.flightApi.core.enums.FlightDirection;
-import com.appfellas.flightApi.service.airline.entity.Airline;
-import com.appfellas.flightApi.service.airport.entity.Airport;
-import com.appfellas.flightApi.service.flight.entity.embeddable.AirCraftType;
-import com.appfellas.flightApi.service.flight.entity.embeddable.FlightRoute;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.DBRef;
-import org.springframework.data.mongodb.core.mapping.Document;
+package com.appfellas.flightApi.service.flight.dto;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.List;
 
-@Document(collection = "flight")
-public class Flight {
+public class FlightInput {
 
-    @Id
-    private String id;
-    private LocalDateTime lastUpdatedAt;
+    private LocalDateTime lastUpdateAt;
     private LocalDateTime actualLandingTime;
-    private AirCraftType airCraftType;
+    private AirCraftTypeInput airCraftType;
     private LocalDateTime estimatedLandingTime;
     private LocalDateTime expectedTimeOnBelt;
-    private FlightDirection flightDirection;
+    private String flightDirection;
     private Integer flightNumber;
     private Boolean isOperationalFlight;
     private String mainFlight;
+    private Integer airlineCode;
     private LocalDateTime scheduledDateTime;
     private LocalDate scheduleDate;
     private LocalTime scheduleTime;
-    private Set<String> passengers = new HashSet<>(); // TODO Capacity - UserIdCount = 0 ? dolu : boş;
-    private Integer capacity;
-    @DBRef
-    private Airport airport;
-    @DBRef
-    private Airline airline;
-    private FlightRoute route;
+    private Integer terminal;
+    private FlightRouteInput route;
+    private List<String> ids;
 
-    public String getId() {
-        return id;
+    public LocalDateTime getLastUpdateAt() {
+        return lastUpdateAt;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public LocalDateTime getLastUpdatedAt() {
-        return lastUpdatedAt;
-    }
-
-    public void setLastUpdatedAt(LocalDateTime lastUpdatedAt) {
-        this.lastUpdatedAt = lastUpdatedAt;
+    public void setLastUpdateAt(LocalDateTime lastUpdateAt) {
+        this.lastUpdateAt = lastUpdateAt;
     }
 
     public LocalDateTime getActualLandingTime() {
@@ -64,11 +40,11 @@ public class Flight {
         this.actualLandingTime = actualLandingTime;
     }
 
-    public AirCraftType getAirCraftType() {
+    public AirCraftTypeInput getAirCraftType() {
         return airCraftType;
     }
 
-    public void setAirCraftType(AirCraftType airCraftType) {
+    public void setAirCraftType(AirCraftTypeInput airCraftType) {
         this.airCraftType = airCraftType;
     }
 
@@ -88,11 +64,11 @@ public class Flight {
         this.expectedTimeOnBelt = expectedTimeOnBelt;
     }
 
-    public FlightDirection getFlightDirection() {
+    public String getFlightDirection() {
         return flightDirection;
     }
 
-    public void setFlightDirection(FlightDirection flightDirection) {
+    public void setFlightDirection(String flightDirection) {
         this.flightDirection = flightDirection;
     }
 
@@ -120,6 +96,14 @@ public class Flight {
         this.mainFlight = mainFlight;
     }
 
+    public Integer getAirlineCode() {
+        return airlineCode;
+    }
+
+    public void setAirlineCode(Integer airlineCode) {
+        this.airlineCode = airlineCode;
+    }
+
     public LocalDateTime getScheduledDateTime() {
         return scheduledDateTime;
     }
@@ -144,43 +128,27 @@ public class Flight {
         this.scheduleTime = scheduleTime;
     }
 
-    public Set<String> getPassengers() {
-        return passengers;
+    public Integer getTerminal() {
+        return terminal;
     }
 
-    public void setPassengers(Set<String> passengers) {
-        this.passengers = passengers;
+    public void setTerminal(Integer terminal) {
+        this.terminal = terminal;
     }
 
-    public Integer getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(Integer capacity) {
-        this.capacity = capacity;
-    }
-
-    public Airport getAirport() {
-        return airport;
-    }
-
-    public void setAirport(Airport airport) {
-        this.airport = airport;
-    }
-
-    public Airline getAirline() {
-        return airline;
-    }
-
-    public void setAirline(Airline airline) {
-        this.airline = airline;
-    }
-
-    public FlightRoute getRoute() {
+    public FlightRouteInput getRoute() {
         return route;
     }
 
-    public void setRoute(FlightRoute route) {
+    public void setRoute(FlightRouteInput route) {
         this.route = route;
+    }
+
+    public List<String> getIds() {
+        return ids;
+    }
+
+    public void setIds(List<String> ids) {
+        this.ids = ids;
     }
 }

@@ -1,6 +1,6 @@
-package com.appfellas.flightApi.service.flight.entity.embeddable;
+package com.appfellas.flightApi.service.flight.dto;
 
-public class FlightRoute {
+public class FlightRouteInput {
 
     private String departureIATACode;
     private String arrivalIATACode;
