@@ -26,9 +26,9 @@ public class Flight {
     private LocalDateTime estimatedLandingTime;
     private LocalDateTime expectedTimeOnBelt;
     private FlightDirection flightDirection;
+    private String flightName;
     private Integer flightNumber;
     private Boolean isOperationalFlight;
-    private String mainFlight;
     private LocalDateTime scheduledDateTime;
     private LocalDate scheduleDate;
     private LocalTime scheduleTime;
@@ -40,6 +40,7 @@ public class Flight {
     @DBRef
     private Airline airline;
     private FlightRoute route;
+    // TODO: Price information will be added !
 
     public String getId() {
         return id;
@@ -97,6 +98,14 @@ public class Flight {
         this.flightDirection = flightDirection;
     }
 
+    public String getFlightName() {
+        return flightName;
+    }
+
+    public void setFlightName(String flightName) {
+        this.flightName = flightName;
+    }
+
     public Integer getFlightNumber() {
         return flightNumber;
     }
@@ -111,14 +120,6 @@ public class Flight {
 
     public void setOperationalFlight(Boolean operationalFlight) {
         isOperationalFlight = operationalFlight;
-    }
-
-    public String getMainFlight() {
-        return mainFlight;
-    }
-
-    public void setMainFlight(String mainFlight) {
-        this.mainFlight = mainFlight;
     }
 
     public LocalDateTime getScheduledDateTime() {

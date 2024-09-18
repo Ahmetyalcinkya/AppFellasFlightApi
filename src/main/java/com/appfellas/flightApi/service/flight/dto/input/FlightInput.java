@@ -3,7 +3,6 @@ package com.appfellas.flightApi.service.flight.dto.input;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.List;
 
 public class FlightInput {
 
@@ -22,7 +21,6 @@ public class FlightInput {
     private LocalTime scheduleTime;
     private Integer terminal;
     private FlightRouteInput route;
-    private List<String> ids;
 
     public LocalDateTime getLastUpdateAt() {
         return lastUpdateAt;
@@ -142,13 +140,5 @@ public class FlightInput {
 
     public void setRoute(FlightRouteInput route) {
         this.route = route;
-    }
-
-    public List<String> getIds() {
-        return ids;
-    }
-
-    public void setIds(List<String> ids) {
-        this.ids = ids;
     }
 }

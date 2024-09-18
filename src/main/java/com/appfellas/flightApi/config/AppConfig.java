@@ -1,6 +1,10 @@
 package com.appfellas.flightApi.config;
 
 import com.appfellas.flightApi.core.enums.Role;
+import com.appfellas.flightApi.service.airport.entity.Airport;
+import com.appfellas.flightApi.service.airport.entity.embeddable.Address;
+import com.appfellas.flightApi.service.airport.repository.AirportRepository;
+import com.appfellas.flightApi.service.airport.service.AirportService;
 import com.appfellas.flightApi.service.user.entity.User;
 import com.appfellas.flightApi.service.user.repository.UserRepository;
 import com.appfellas.flightApi.service.user.service.UserService;
@@ -33,6 +37,26 @@ public class AppConfig {
                 userRepository.save(user);
             } else {
                 LOGGER.info("Admin account created -> Email: {} / Password: Ahmet123.", found.getEmail());
+            }
+        };
+    }
+
+    @Bean
+    public CommandLineRunner createAirport(@Autowired AirportService airportService, @Autowired AirportRepository airportRepository){
+        return args -> {
+            Airport found = airportService.findBYIATACode("SAW");
+            if (found == null) {
+                Airport airport = new Airport();
+                airport.setName("Sabiha Gökçen Airport");
+                airport.setIATACode("SAW");
+                Address address = new Address();
+                address.setCity("Istanbul");
+                address.setCountry("Türkiye");
+                address.setCountryCode("TR");
+                airport.setAddress(address);
+                airportRepository.save(airport);
+            } else {
+                LOGGER.info("Airport already created!");
             }
         };
     }

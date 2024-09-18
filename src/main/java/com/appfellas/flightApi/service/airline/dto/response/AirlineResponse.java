@@ -1,22 +1,14 @@
-package com.appfellas.flightApi.service.airline.entity;
+package com.appfellas.flightApi.service.airline.dto.response;
 
 import com.appfellas.flightApi.service.airport.entity.embeddable.Address;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.HashSet;
-import java.util.Set;
+public class AirlineResponse {
 
-@Document(collection = "airline")
-public class Airline {
-
-    @Id
     private String id;
     private String name;
     private Integer airlineCode;
-    private String airlineIATACode; // TODO: FindByAirlineIATACode; THY -> TK
+    private String airlineIATACode;
     private Address country;
-    private Set<String> flightIds = new HashSet<>();
 
     public String getId() {
         return id;
@@ -56,13 +48,5 @@ public class Airline {
 
     public void setCountry(Address country) {
         this.country = country;
-    }
-
-    public Set<String> getFlightIds() {
-        return flightIds;
-    }
-
-    public void setFlightIds(Set<String> flightIds) {
-        this.flightIds = flightIds;
     }
 }
