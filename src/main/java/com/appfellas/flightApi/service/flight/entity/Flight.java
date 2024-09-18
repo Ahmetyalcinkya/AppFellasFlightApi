@@ -2,7 +2,6 @@ package com.appfellas.flightApi.service.flight.entity;
 
 import com.appfellas.flightApi.core.enums.FlightDirection;
 import com.appfellas.flightApi.service.airline.entity.Airline;
-import com.appfellas.flightApi.service.airport.entity.Airport;
 import com.appfellas.flightApi.service.flight.entity.embeddable.AirCraftType;
 import com.appfellas.flightApi.service.flight.entity.embeddable.FlightRoute;
 import org.springframework.data.annotation.Id;
@@ -34,13 +33,11 @@ public class Flight {
     private LocalTime scheduleTime;
     private Set<String> passengers = new HashSet<>(); // TODO Capacity - UserIdCount = 0 ? dolu : boş;
     private Integer capacity;
-    @DBRef
-    private Airport airport;
     private Integer terminal;
     @DBRef
     private Airline airline;
     private FlightRoute route;
-    // TODO: Price information will be added !
+    private Long price;
 
     public String getId() {
         return id;
@@ -162,14 +159,6 @@ public class Flight {
         this.capacity = capacity;
     }
 
-    public Airport getAirport() {
-        return airport;
-    }
-
-    public void setAirport(Airport airport) {
-        this.airport = airport;
-    }
-
     public Integer getTerminal() {
         return terminal;
     }
@@ -192,5 +181,13 @@ public class Flight {
 
     public void setRoute(FlightRoute route) {
         this.route = route;
+    }
+
+    public Long getPrice() {
+        return price;
+    }
+
+    public void setPrice(Long price) {
+        this.price = price;
     }
 }

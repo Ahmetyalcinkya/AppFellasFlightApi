@@ -2,22 +2,26 @@ package com.appfellas.flightApi.service.flight.service.mapper;
 
 import com.appfellas.flightApi.core.dao.mapper.BaseMapper;
 import com.appfellas.flightApi.core.enums.FlightDirection;
+import com.appfellas.flightApi.service.airline.entity.Airline;
+import com.appfellas.flightApi.service.airline.repository.AirlineRepository;
+import com.appfellas.flightApi.service.airline.service.AirlineService;
 import com.appfellas.flightApi.service.flight.dto.input.FlightInput;
 import com.appfellas.flightApi.service.flight.entity.Flight;
 import org.springframework.stereotype.Component;
 
-import java.util.Random;
-
 @Component
 public class FlightMapper implements BaseMapper<Flight, FlightInput> {
 
-    // TODO : Airlines and airport sevice will be autowired here!
     private final AirCraftTypeMapper airCraftTypeMapper;
     private final FlightRouteMapper flightRouteMapper;
+    private final AirlineService airlineService;
+    private final AirlineRepository airlineRepository;
 
-    public FlightMapper(AirCraftTypeMapper airCraftTypeMapper, FlightRouteMapper flightRouteMapper) {
+    public FlightMapper(AirCraftTypeMapper airCraftTypeMapper, FlightRouteMapper flightRouteMapper, AirlineService airlineService, AirlineRepository airlineRepository) {
         this.airCraftTypeMapper = airCraftTypeMapper;
         this.flightRouteMapper = flightRouteMapper;
+        this.airlineService = airlineService;
+        this.airlineRepository = airlineRepository;
     }
 
     @Override
@@ -28,15 +32,18 @@ public class FlightMapper implements BaseMapper<Flight, FlightInput> {
         flight.setFlightNumber(input.getFlightNumber());
         flight.setOperationalFlight(input.getOperationalFlight());
         flight.setAirCraftType(airCraftTypeMapper.createEntity(input.getAirCraftType()));
-//        flight.setAirport();
-//        flight.setAirline();
+        Airline airline = airlineService.findByIATACode(input.getPrefixIATA());
+        airline.getFlightIds().add(flight.getId());
+        flight.setAirline(airline);
+        airlineRepository.save(airline);
         flight.setRoute(flightRouteMapper.createEntity(input.getRoute()));
+        flight.setPrice(randomPrice());
         return flight;
     }
 
     @Override
     public Flight updateEntity(Flight entity, FlightInput input) {
-        entity.setLastUpdatedAt(input.getLastUpdateAt());
+        entity.setLastUpdatedAt(input.getLastUpdatedAt());
         entity.setActualLandingTime(input.getActualLandingTime());
         entity.setEstimatedLandingTime(input.getEstimatedLandingTime());
         entity.setExpectedTimeOnBelt(input.getExpectedTimeOnBelt());
@@ -46,8 +53,7 @@ public class FlightMapper implements BaseMapper<Flight, FlightInput> {
         return entity;
     }
 
-    private Integer randomIndex(){
-        Random random = new Random();
-        return random.nextInt(11);
+    private Long randomPrice() {
+        return Math.round(Math.random() * 1000);
     }
 }

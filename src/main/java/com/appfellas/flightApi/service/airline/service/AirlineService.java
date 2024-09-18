@@ -42,10 +42,6 @@ public class AirlineService {
         airlineRepository.save(airlineMapper.createEntity(input));
     }
 
-    public void update(String id, AirlineInput input) {
-        airlineRepository.save(airlineMapper.updateEntity(findById(id), input));
-    }
-
     public void delete(String id) {
         airlineRepository.delete(findById(id));
     }

@@ -14,7 +14,7 @@ public class Airline {
     private String id;
     private String name;
     private Integer airlineCode;
-    private String airlineIATACode; // TODO: FindByAirlineIATACode; THY -> TK
+    private String airlineIATACode;
     private Address country;
     private Set<String> flightIds = new HashSet<>();
 

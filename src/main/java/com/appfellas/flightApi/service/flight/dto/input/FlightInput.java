@@ -6,28 +6,28 @@ import java.time.LocalTime;
 
 public class FlightInput {
 
-    private LocalDateTime lastUpdateAt;
+    private LocalDateTime lastUpdatedAt;
     private LocalDateTime actualLandingTime;
     private AirCraftTypeInput airCraftType;
     private LocalDateTime estimatedLandingTime;
     private LocalDateTime expectedTimeOnBelt;
     private String flightDirection;
+    private String flightName;
     private Integer flightNumber;
     private Boolean isOperationalFlight;
-    private String mainFlight;
-    private Integer airlineCode;
+    private String prefixIATA;
     private LocalDateTime scheduledDateTime;
     private LocalDate scheduleDate;
     private LocalTime scheduleTime;
     private Integer terminal;
     private FlightRouteInput route;
 
-    public LocalDateTime getLastUpdateAt() {
-        return lastUpdateAt;
+    public LocalDateTime getLastUpdatedAt() {
+        return lastUpdatedAt;
     }
 
-    public void setLastUpdateAt(LocalDateTime lastUpdateAt) {
-        this.lastUpdateAt = lastUpdateAt;
+    public void setLastUpdatedAt(LocalDateTime lastUpdatedAt) {
+        this.lastUpdatedAt = lastUpdatedAt;
     }
 
     public LocalDateTime getActualLandingTime() {
@@ -70,6 +70,14 @@ public class FlightInput {
         this.flightDirection = flightDirection;
     }
 
+    public String getFlightName() {
+        return flightName;
+    }
+
+    public void setFlightName(String flightName) {
+        this.flightName = flightName;
+    }
+
     public Integer getFlightNumber() {
         return flightNumber;
     }
@@ -86,20 +94,12 @@ public class FlightInput {
         isOperationalFlight = operationalFlight;
     }
 
-    public String getMainFlight() {
-        return mainFlight;
+    public String getPrefixIATA() {
+        return prefixIATA;
     }
 
-    public void setMainFlight(String mainFlight) {
-        this.mainFlight = mainFlight;
-    }
-
-    public Integer getAirlineCode() {
-        return airlineCode;
-    }
-
-    public void setAirlineCode(Integer airlineCode) {
-        this.airlineCode = airlineCode;
+    public void setPrefixIATA(String prefixIATA) {
+        this.prefixIATA = prefixIATA;
     }
 
     public LocalDateTime getScheduledDateTime() {

@@ -1,9 +1,13 @@
 package com.appfellas.flightApi.service.flight.service;
 
+import com.appfellas.flightApi.core.enums.SortDirection;
+import com.appfellas.flightApi.core.enums.SortProperty;
 import com.appfellas.flightApi.service.flight.dto.input.FlightInput;
 import com.appfellas.flightApi.service.flight.entity.Flight;
 import com.appfellas.flightApi.service.flight.repository.FlightRepository;
+import com.appfellas.flightApi.service.flight.service.mapper.FlightMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
@@ -18,11 +22,13 @@ import java.util.List;
 public class FlightService {
 
     private final FlightRepository flightRepository;
+    private final FlightMapper flightMapper;
     private final MongoTemplate mongoTemplate;
 
     @Autowired
-    public FlightService(FlightRepository flightRepository, MongoTemplate mongoTemplate) {
+    public FlightService(FlightRepository flightRepository, FlightMapper flightMapper, MongoTemplate mongoTemplate) {
         this.flightRepository = flightRepository;
+        this.flightMapper = flightMapper;
         this.mongoTemplate = mongoTemplate;
     }
 
@@ -32,6 +38,10 @@ public class FlightService {
 
     public Flight findById(String id) {
         return flightRepository.findById(id).orElseThrow(() -> new RuntimeException("Flight not found!"));
+    }
+
+    public Flight findByFlightName(String name){
+        return mongoTemplate.findOne(Query.query(Criteria.where("flightName").is(name)), Flight.class);
     }
 
     public List<Flight> filterFlightByDate(LocalDate startDate, LocalDate endDate) {
@@ -50,7 +60,7 @@ public class FlightService {
         return mongoTemplate.find(Query.query(Criteria.where("airline.$id").is(airlineId)), Flight.class);
     }
 
-    public List<Flight> filterFlight(LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String airlineId) {
+    public List<Flight> filterFlight(LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String airlineId, SortProperty sortProperty, SortDirection sortDirection) {
         Criteria criteria = new Criteria();
         if (startDate != null && endDate != null) {
             if (startDate.isAfter(endDate)) {
@@ -81,10 +91,20 @@ public class FlightService {
         if (airlineId != null && !airlineId.isEmpty()) {
             criteria = criteria.and("airline.$id").is(airlineId);
         }
-        return mongoTemplate.find(Query.query(criteria), Flight.class);
+        Sort.Direction direction = Sort.Direction.valueOf(sortDirection.name());
+        Sort sort = Sort.by(direction, sortProperty == null ? "scheduledDateTime" : "price"); // TODO : Price field will be added to flight;
+        return mongoTemplate.find(Query.query(criteria).with(sort), Flight.class);
+    }
+
+    public void save(FlightInput input) {
+        flightRepository.save(flightMapper.createEntity(input));
     }
 
     public void update(String id, FlightInput input) {
+        flightRepository.save(flightMapper.updateEntity(findById(id), input));
+    }
 
+    public void delete(String id) {
+        flightRepository.delete(findById(id));
     }
 }
