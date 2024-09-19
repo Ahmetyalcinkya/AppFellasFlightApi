@@ -3,7 +3,10 @@ spring:
     name: AppFellas Flight API
   data:
     mongodb:
-      uri: mongodb://localhost:27017
+      uri: mongodb+srv://Ahmetyalcinkya:admin@administration.kyuby.mongodb.net/?retryWrites=true&w=majority&appName=administration
+      # If you want to run the app you need to replace the uri field with your local or cloud server url.
+        # Example : uri: mongodb://username:password@192.168.1.88:27018 or mongodb://username:password@<cloud-ip-address>:27017/database
+          # You can change the database name.
       database: appFellasDb
 server:
   port: 8080

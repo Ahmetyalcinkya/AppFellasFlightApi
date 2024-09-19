@@ -27,7 +27,7 @@ public class AppConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(AppConfig.class);
 
     @Bean
-    public CommandLineRunner createAdmin(@Autowired UserService userService, @Autowired UserRepository userRepository){
+    public CommandLineRunner adminCreator(@Autowired UserService userService, @Autowired UserRepository userRepository){
         return args -> {
             User found = userService.findByEmail("ahmetcan.yalcinkaya55@gmail.com");
             if(found == null) {
@@ -46,7 +46,7 @@ public class AppConfig {
     }
 
     @Bean
-    public CommandLineRunner createAirport(@Autowired AirportService airportService, @Autowired AirportRepository airportRepository){
+    public CommandLineRunner airportCreator(@Autowired AirportService airportService, @Autowired AirportRepository airportRepository){
         return args -> {
             String[] names = {"Istanbul Airport", "Sabiha Gokcen International Airport", "Antalya Airport", "Izmir Adnan Menderes Airport", "Ankara Esenboga Airport",
                     "London Heathrow Airport", "Paris Charles de Gaulle Airport", "Amsterdam Schiphol Airport", "Dubai International Airport",
@@ -107,6 +107,13 @@ public class AppConfig {
                     LOGGER.info("{} -> Airline has been added!", IATACodes[i]);
                 }
             }
+        };
+    }
+
+    @Bean
+    public CommandLineRunner flightCreator(){
+        return args -> {
+            // TODO : Implement flightCreator
         };
     }
 
