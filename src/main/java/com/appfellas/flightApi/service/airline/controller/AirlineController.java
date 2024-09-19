@@ -42,7 +42,7 @@ public class AirlineController {
         return ResponseEntity.ok().body("");
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<String> deleteAirline(@PathVariable String id) {
         airlineService.delete(id);
         return ResponseEntity.ok().body("");

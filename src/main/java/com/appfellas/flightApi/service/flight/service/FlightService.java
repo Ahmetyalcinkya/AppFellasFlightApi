@@ -40,24 +40,24 @@ public class FlightService {
         return flightRepository.findById(id).orElseThrow(() -> new RuntimeException("Flight not found!"));
     }
 
-    public Flight findByFlightName(String name){
+    public Flight findByFlightName(String name) {
         return mongoTemplate.findOne(Query.query(Criteria.where("flightName").is(name)), Flight.class);
     }
 
     public List<Flight> filterFlightByDate(LocalDate startDate, LocalDate endDate) {
         return mongoTemplate.find(Query.query(Criteria.where("scheduledDateTime")
                 .gte(LocalDateTime.of(startDate, LocalTime.MIN))
-                .lte(LocalDateTime.of(endDate, LocalTime.MAX))), Flight.class);
+                .lte(LocalDateTime.of(endDate, LocalTime.MAX)).and("isOperationalFlight").is(false)), Flight.class);
     }
 
     public List<Flight> filterFlightByTime(LocalTime startTime, LocalTime endTime) {
         return mongoTemplate.find(Query.query(Criteria.where("scheduledDateTime")
                 .gte(LocalDateTime.of(LocalDate.now(), startTime))
-                .lte(LocalDateTime.of(LocalDate.now(), endTime))), Flight.class);
+                .lte(LocalDateTime.of(LocalDate.now(), endTime)).and("isOperationalFlight").is(false)), Flight.class);
     }
 
     public List<Flight> filterFlightByAirline(String airlineId) {
-        return mongoTemplate.find(Query.query(Criteria.where("airline.$id").is(airlineId)), Flight.class);
+        return mongoTemplate.find(Query.query(Criteria.where("airline.$id").is(airlineId).and("isOperationalFlight").is(false)), Flight.class);
     }
 
     public List<Flight> filterFlight(LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String airlineId, SortProperty sortProperty, SortDirection sortDirection) {
@@ -93,7 +93,7 @@ public class FlightService {
         }
         Sort.Direction direction = Sort.Direction.valueOf(sortDirection.name());
         Sort sort = Sort.by(direction, sortProperty == null ? "scheduledDateTime" : "price"); // TODO : Price field will be added to flight;
-        return mongoTemplate.find(Query.query(criteria).with(sort), Flight.class);
+        return mongoTemplate.find(Query.query(criteria.and("isOperationalFlight").is(false)).with(sort), Flight.class);
     }
 
     public void save(FlightInput input) {

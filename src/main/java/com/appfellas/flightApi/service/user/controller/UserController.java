@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-
+        //TODO : ALL METHODS MUST UPDATE WITH ADMIN AND USER ENDPOINTS !!!
     private final UserService userService;
 
     @Autowired
@@ -46,6 +46,11 @@ public class UserController {
     public ResponseEntity<String> updateUser(@PathVariable String id, @RequestBody UserInput input) {
         userService.update(id, input);
         return ResponseEntity.ok().body("");
+    }
+
+    @PutMapping("/update-flights")
+    public ResponseEntity<String> addFlightToUser(@PathVariable String id, @RequestBody List<String> flights){
+        return ResponseEntity.ok().body(userService.addFlightToUser(id, flights));
     }
 
     @DeleteMapping("/delete/{id}")

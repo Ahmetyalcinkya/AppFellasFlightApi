@@ -26,7 +26,7 @@ public class AirportController {
         return ResponseEntity.ok().body(airportService.findAll().stream().map(EntityMapper::airport).toList());
     }
 
-    @GetMapping("/find-by-iata-code")
+    @GetMapping("/IATACode")
     public ResponseEntity<AirportResponse> findByIATACode(@RequestParam(name = "code") String IATACode) {
         return ResponseEntity.ok().body(EntityMapper.airport(airportService.findBYIATACode(IATACode)));
     }

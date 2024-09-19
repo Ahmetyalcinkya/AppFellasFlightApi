@@ -54,11 +54,12 @@ public class EntityMapper {
         flightResponse.setScheduledDateTime(flight.getScheduledDateTime());
         flightResponse.setScheduleDate(flight.getScheduleDate());
         flightResponse.setScheduleTime(flight.getScheduleTime());
-        flightResponse.setCapacity(flight.getCapacity());
+        flightResponse.setCapacity(flight.getCapacity() - flight.getPassengers().size());
         flightResponse.setTerminal(flight.getTerminal());
         flightResponse.setAirlineName(flight.getAirline().getName());
         flightResponse.setRoute(flight.getRoute());
         flightResponse.setPrice(flight.getPrice());
+        flightResponse.setPassengerIds(flight.getPassengers());
         return flightResponse;
     }
 }

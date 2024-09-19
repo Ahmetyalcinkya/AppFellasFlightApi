@@ -6,6 +6,8 @@ import com.appfellas.flightApi.service.flight.entity.embeddable.FlightRoute;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.List;
+import java.util.Set;
 
 public class FlightResponse {
 
@@ -26,6 +28,7 @@ public class FlightResponse {
     private String airlineName;
     private FlightRoute route;
     private Long price;
+    private Set<String> passengerIds;
 
     public String getId() {
         return id;
@@ -161,5 +164,13 @@ public class FlightResponse {
 
     public void setPrice(Long price) {
         this.price = price;
+    }
+
+    public Set<String> getPassengerIds() {
+        return passengerIds;
+    }
+
+    public void setPassengerIds(Set<String> passengerIds) {
+        this.passengerIds = passengerIds;
     }
 }

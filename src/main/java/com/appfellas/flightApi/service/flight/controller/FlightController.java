@@ -35,7 +35,7 @@ public class FlightController {
         return ResponseEntity.ok().body(EntityMapper.flight(flightService.findById(id)));
     }
 
-    @GetMapping
+    @GetMapping("/name")
     public ResponseEntity<FlightResponse> getFlightByName(@RequestParam(name = "name") String name) {
         return ResponseEntity.ok().body(EntityMapper.flight(flightService.findByFlightName(name)));
     }
@@ -67,13 +67,13 @@ public class FlightController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<String> saveFlight(@PathVariable String id, @RequestBody FlightInput input) {
+    public ResponseEntity<String> updateFlight(@PathVariable String id, @RequestBody FlightInput input) {
         flightService.update(id, input);
         return ResponseEntity.ok().body("");
     }
 
     @DeleteMapping("/delete/{id}")
-    public ResponseEntity<String> saveFlight(@PathVariable String id) {
+    public ResponseEntity<String> deleteFlight(@PathVariable String id) {
         flightService.delete(id);
         return ResponseEntity.ok().body("");
     }

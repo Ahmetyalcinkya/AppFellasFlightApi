@@ -50,6 +50,13 @@ public class UserService {
         userRepository.save(userMapper.updateEntity(findById(id), input));
     }
 
+    public String addFlightToUser(String id, List<String> flights){
+        UserInput input = new UserInput();
+        input.setFlights(flights);
+        userRepository.save(userMapper.updateEntity(findById(id), input));
+        return "Flight information successfully added to user!";
+    }
+
     public void delete(String id) {
         userRepository.delete(findById(id));
     }

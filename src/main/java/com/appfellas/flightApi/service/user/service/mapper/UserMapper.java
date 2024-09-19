@@ -7,6 +7,8 @@ import com.appfellas.flightApi.service.flight.repository.FlightRepository;
 import com.appfellas.flightApi.service.flight.service.FlightService;
 import com.appfellas.flightApi.service.user.dto.input.UserInput;
 import com.appfellas.flightApi.service.user.entity.User;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,6 +16,8 @@ import java.time.LocalDateTime;
 
 @Component
 public class UserMapper implements BaseMapper<User, UserInput> {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(UserMapper.class);
 
     //TODO : Password encoder will be autowired
     private final FlightService flightService;
@@ -42,7 +46,12 @@ public class UserMapper implements BaseMapper<User, UserInput> {
         if (!input.getFlights().isEmpty()) {
             entity.getFlights().addAll(input.getFlights().stream().map(id -> {
                 Flight flight = flightService.findById(id);
-                flight.getPassengers().add(entity.getId());
+                if (flight.getPassengers().contains(entity.getId())) LOGGER.warn("The user with the id: {}, has already in the flight with the id: {}", entity.getId(), flight.getId());
+                if (flight.getCapacity() - flight.getPassengers().size() > 0) {
+                    flight.getPassengers().add(entity.getId());
+                } else {
+                    LOGGER.warn("The flight capacity is full");
+                }
                 flightRepository.save(flight);
                 return flight;
             }).toList());
