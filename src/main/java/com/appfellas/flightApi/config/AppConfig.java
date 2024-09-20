@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDateTime;
 import java.util.Random;
@@ -27,7 +28,7 @@ public class AppConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(AppConfig.class);
 
     @Bean
-    public CommandLineRunner adminCreator(@Autowired UserService userService, @Autowired UserRepository userRepository){
+    public CommandLineRunner adminCreator(@Autowired UserService userService, @Autowired UserRepository userRepository, @Autowired PasswordEncoder passwordEncoder){
         return args -> {
             User found = userService.findByEmail("ahmetcan.yalcinkaya55@gmail.com");
             if(found == null) {
@@ -35,7 +36,7 @@ public class AppConfig {
                 user.setFirstName("Ahmet Can");
                 user.setLastName("Yalçınkaya");
                 user.setEmail("ahmetcan.yalcinkaya55@gmail.com");
-                user.setPassword("Ahmet123."); // TODO : passwordEncoder -> encode the password after the security;
+                user.setPassword(passwordEncoder.encode("Ahmet123."));
                 user.setCreatedDateTime(LocalDateTime.now());
                 user.setRole(Role.ADMIN);
                 userRepository.save(user);

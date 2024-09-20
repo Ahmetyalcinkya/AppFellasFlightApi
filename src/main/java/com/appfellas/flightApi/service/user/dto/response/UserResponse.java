@@ -1,5 +1,9 @@
 package com.appfellas.flightApi.service.user.dto.response;
 
+import com.appfellas.flightApi.service.flight.dto.response.FlightResponse;
+
+import java.util.List;
+
 public class UserResponse {
 
     private String id;
@@ -7,7 +11,7 @@ public class UserResponse {
     private String lastName;
     private String email;
     private String role;
-//    private List<FlightResponse> flights; TODO : User flights must be added!
+    private List<FlightResponse> flights;
 
     public String getId() {
         return id;
@@ -47,5 +51,13 @@ public class UserResponse {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public List<FlightResponse> getFlights() {
+        return flights;
+    }
+
+    public void setFlights(List<FlightResponse> flights) {
+        this.flights = flights;
     }
 }

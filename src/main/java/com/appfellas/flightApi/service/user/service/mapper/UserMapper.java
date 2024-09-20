@@ -10,6 +10,7 @@ import com.appfellas.flightApi.service.user.entity.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -19,14 +20,15 @@ public class UserMapper implements BaseMapper<User, UserInput> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(UserMapper.class);
 
-    //TODO : Password encoder will be autowired
     private final FlightService flightService;
     private final FlightRepository flightRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public UserMapper(FlightService flightService, FlightRepository flightRepository) {
+    public UserMapper(FlightService flightService, FlightRepository flightRepository, PasswordEncoder passwordEncoder) {
         this.flightService = flightService;
         this.flightRepository = flightRepository;
+        this.passwordEncoder = passwordEncoder;
     }
 
     @Override
@@ -34,7 +36,7 @@ public class UserMapper implements BaseMapper<User, UserInput> {
         User entity = updateEntity(new User(), input);
         entity.setRole(Role.USER);
         entity.setCreatedDateTime(LocalDateTime.now());
-//        entity.setPassword();
+        entity.setPassword(passwordEncoder.encode(input.getPassword()));
         return entity;
     }
 
@@ -46,7 +48,8 @@ public class UserMapper implements BaseMapper<User, UserInput> {
         if (!input.getFlights().isEmpty()) {
             entity.getFlights().addAll(input.getFlights().stream().map(id -> {
                 Flight flight = flightService.findById(id);
-                if (flight.getPassengers().contains(entity.getId())) LOGGER.warn("The user with the id: {}, has already in the flight with the id: {}", entity.getId(), flight.getId());
+                if (flight.getPassengers().contains(entity.getId()))
+                    LOGGER.warn("The user with the id: {}, has already in the flight with the id: {}", entity.getId(), flight.getId());
                 if (flight.getCapacity() - flight.getPassengers().size() > 0) {
                     flight.getPassengers().add(entity.getId());
                 } else {

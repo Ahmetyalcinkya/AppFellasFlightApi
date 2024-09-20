@@ -9,6 +9,8 @@ import com.appfellas.flightApi.service.flight.entity.Flight;
 import com.appfellas.flightApi.service.user.dto.response.UserResponse;
 import com.appfellas.flightApi.service.user.entity.User;
 
+import java.util.function.Function;
+
 public class EntityMapper {
 
     public static UserResponse user(User user) {
@@ -18,6 +20,7 @@ public class EntityMapper {
         userResponse.setLastName(user.getLastName());
         userResponse.setEmail(user.getEmail());
         userResponse.setRole(user.getRole().name());
+        userResponse.setFlights(user.getFlights().stream().map(EntityMapper::flight).toList());
         return userResponse;
     }
 

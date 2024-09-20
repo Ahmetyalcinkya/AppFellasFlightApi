@@ -92,7 +92,7 @@ public class FlightService {
             criteria = criteria.and("airline.$id").is(airlineId);
         }
         Sort.Direction direction = Sort.Direction.valueOf(sortDirection.name());
-        Sort sort = Sort.by(direction, sortProperty == null ? "scheduledDateTime" : "price"); // TODO : Price field will be added to flight;
+        Sort sort = Sort.by(direction, sortProperty == null ? "scheduledDateTime" : "price");
         return mongoTemplate.find(Query.query(criteria.and("isOperationalFlight").is(false)).with(sort), Flight.class);
     }
 
