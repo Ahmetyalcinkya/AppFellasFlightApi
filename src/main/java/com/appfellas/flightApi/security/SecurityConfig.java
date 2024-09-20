@@ -50,14 +50,11 @@ public class SecurityConfig {
         http.formLogin(AbstractHttpConfigurer::disable);
         http.httpBasic(AbstractHttpConfigurer::disable);
         http.cors(Customizer.withDefaults());
-        http.authorizeHttpRequests(registry -> { // TODO : 401 all requests !!! Check this !!
+        http.authorizeHttpRequests(registry -> {
             registry.requestMatchers(
-                    new AntPathRequestMatcher("/AppFellas/api/v1/flight/**", HttpMethod.GET.name()),
-                    new AntPathRequestMatcher("/AppFellas/api/v1/airport/**", HttpMethod.GET.name()),
-                    new AntPathRequestMatcher("/AppFellas/api/v1/airline/**", HttpMethod.GET.name()),
-                    new AntPathRequestMatcher("/AppFellas/api/v1/auth/**")
+                    new AntPathRequestMatcher("/**", HttpMethod.GET.name())
             ).permitAll();
-//            registry.anyRequest().authenticated();
+            registry.anyRequest().authenticated();
         });
         http.addFilterBefore(new JwtAuthenticationFilter(authenticationManager), LogoutFilter.class);
         http.sessionManagement(httpSecuritySessionManagementConfigurer -> httpSecuritySessionManagementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
