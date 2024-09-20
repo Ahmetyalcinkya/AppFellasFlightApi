@@ -31,7 +31,7 @@ public class Flight {
     private LocalDateTime scheduledDateTime;
     private LocalDate scheduleDate;
     private LocalTime scheduleTime;
-    private Set<String> passengers = new HashSet<>(); // TODO Capacity - UserIdCount = 0 ? dolu : boş;
+    private Set<String> passengers = new HashSet<>();
     private Integer capacity;
     private Integer terminal;
     @DBRef
