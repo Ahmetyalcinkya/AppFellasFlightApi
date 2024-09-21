@@ -2,6 +2,7 @@ package com.appfellas.flightApi.config;
 
 import com.appfellas.flightApi.core.enums.FlightDirection;
 import com.appfellas.flightApi.core.enums.Role;
+import com.appfellas.flightApi.core.exception.FlightApiException;
 import com.appfellas.flightApi.service.airline.entity.Airline;
 import com.appfellas.flightApi.service.airline.repository.AirlineRepository;
 import com.appfellas.flightApi.service.airline.service.AirlineService;
@@ -9,33 +10,46 @@ import com.appfellas.flightApi.service.airport.entity.Airport;
 import com.appfellas.flightApi.service.airport.entity.embeddable.Address;
 import com.appfellas.flightApi.service.airport.repository.AirportRepository;
 import com.appfellas.flightApi.service.airport.service.AirportService;
+import com.appfellas.flightApi.service.flight.dto.input.AirCraftTypeInput;
+import com.appfellas.flightApi.service.flight.dto.input.FlightInput;
+import com.appfellas.flightApi.service.flight.dto.input.FlightRouteInput;
 import com.appfellas.flightApi.service.flight.entity.Flight;
 import com.appfellas.flightApi.service.flight.entity.embeddable.AirCraftType;
 import com.appfellas.flightApi.service.flight.entity.embeddable.FlightRoute;
 import com.appfellas.flightApi.service.flight.repository.FlightRepository;
 import com.appfellas.flightApi.service.flight.service.FlightService;
+import com.appfellas.flightApi.service.flight.service.mapper.FlightMapper;
 import com.appfellas.flightApi.service.user.entity.User;
 import com.appfellas.flightApi.service.user.repository.UserRepository;
 import com.appfellas.flightApi.service.user.service.UserService;
+import org.bson.json.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
+import org.springframework.web.client.RestTemplate;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.time.OffsetDateTime;
+import java.util.*;
 
 @Configuration
 public class AppConfig {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AppConfig.class);
+
+    @Bean
+    public RestTemplate restTemplate(){
+        return new RestTemplate();
+    }
 
     @Bean
     public CommandLineRunner adminCreator(@Autowired UserService userService, @Autowired UserRepository userRepository, @Autowired PasswordEncoder passwordEncoder) {
@@ -267,8 +281,97 @@ public class AppConfig {
         };
     }
 
+    @Bean
+    public CommandLineRunner fetchFlights(@Autowired RestTemplate restTemplate, @Autowired FlightService flightService){
+        return args -> {
+            String url = "https://api.schiphol.nl/public-flights/flights?includedelays=false&page=0&sort=+scheduleTime";
+            HttpHeaders headers = new HttpHeaders();
+            headers.set("app_id", "aa970d78");
+            headers.set("app_key", "41f2bf667160dd29fed8f2a51c1ea390");
+            headers.set("ResourceVersion", "v4");
+            String[] IATACodes = {"TK", "AA", "LH", "BA", "DL", "TK", "TK", "KL", "AA", "TK"};
+
+            HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(headers);
+
+            ResponseEntity<Object> response = restTemplate.exchange(url, HttpMethod.GET, requestEntity, Object.class);
+            if (response.getStatusCode() == HttpStatus.OK) {
+                Object body = response.getBody();
+                System.out.println(body);
+                LinkedHashMap<String, ArrayList<Map<String, Object>>> flights = (LinkedHashMap<String, ArrayList<Map<String, Object>>>) body;
+                if (flights != null) {
+                    ArrayList<Map<String, Object>> fetchedFlights = flights.get("flights");
+                    for (int i = 0; i < fetchedFlights.size(); i++) {
+                        Map<String, Object> data = fetchedFlights.get(i);
+                        FlightInput flightInput = new FlightInput();
+                        for (Map.Entry<String, Object> flight: data.entrySet()) {
+                            String key = flight.getKey();
+                            Object value = flight.getValue();
+                            System.out.println("Key: " + key + "Value: " + value);
+                            if (key.equalsIgnoreCase("lastUpdatedAt")) {
+                                OffsetDateTime offsetDateTime = OffsetDateTime.parse((String) value);
+                                LocalDateTime lastUpdatedAt = offsetDateTime.toLocalDateTime();
+                                flightInput.setLastUpdatedAt(lastUpdatedAt);
+                            }
+                            if (key.equalsIgnoreCase("actualLandingTime")) {
+                                OffsetDateTime offsetDateTime = OffsetDateTime.parse((String) value);
+                                LocalDateTime actualLandingTime = offsetDateTime.toLocalDateTime();
+                                flightInput.setActualLandingTime(actualLandingTime);
+                            }
+                            if (key.equalsIgnoreCase("aircraftType")) {
+                                Map<String, String> aircraftType = (LinkedHashMap<String, String>) value;
+                                AirCraftTypeInput airCraftTypeInput = new AirCraftTypeInput();
+                                if (aircraftType.containsKey("iataMain")) airCraftTypeInput.setIataMain(aircraftType.get("iataMain"));
+                                if (aircraftType.containsKey("iataSub")) airCraftTypeInput.setIataSub(aircraftType.get("iataSub"));
+                                flightInput.setAirCraftType(airCraftTypeInput);
+                            }
+                            if (key.equalsIgnoreCase("estimatedLandingTime")) {
+                                OffsetDateTime offsetDateTime = OffsetDateTime.parse((String) value);
+                                LocalDateTime estimatedLandingTime = offsetDateTime.toLocalDateTime();
+                                flightInput.setEstimatedLandingTime(estimatedLandingTime);
+                            }
+                            if (key.equalsIgnoreCase("expectedTimeOnBelt")) {
+                                OffsetDateTime offsetDateTime = OffsetDateTime.parse((String) value);
+                                LocalDateTime expectedTimeOnBelt = offsetDateTime.toLocalDateTime();
+                                flightInput.setExpectedTimeOnBelt(expectedTimeOnBelt);
+                            }
+                            flightInput.setFlightDirection(Math.round(Math.random() * 2) == 1 ? "D" : "A");
+                            String IATACode = IATACodes[randomIndex()];
+                            flightInput.setPrefixIATA(IATACode);
+                            if (key.equalsIgnoreCase("flightNumber")) {
+                                flightInput.setFlightNumber((Integer) value);
+                                flightInput.setFlightName(IATACode + flightInput.getFlightNumber());
+                            }
+                            flightInput.setOperationalFlight(false);
+                            if (key.equalsIgnoreCase("scheduleDateTime")) {
+                                OffsetDateTime offsetDateTime = OffsetDateTime.parse((String) value);
+                                LocalDateTime scheduleDateTime = offsetDateTime.toLocalDateTime();
+                                flightInput.setScheduledDateTime(scheduleDateTime);
+                            }
+                            if (key.equalsIgnoreCase("scheduleDate")) flightInput.setScheduleDate(LocalDate.parse((String) value));
+                            if (key.equalsIgnoreCase("scheduleTime")) flightInput.setScheduleTime(LocalTime.parse((String) value));
+                            if (key.equalsIgnoreCase("terminal")) flightInput.setTerminal((Integer) value);
+                            String[] departureAirports = {"SAW", "JFK", "MUC", "LHR", "LAX", "SAW", "IST", "AMS", "JFK", "AYT"};
+                            String[] arrivalAirports = {"MUC", "DXB", "CDG", "SIN", "ZRH", "SVO", "HKG", "ESB", "SAW", "DXB"};
+                            FlightRouteInput flightRouteInput = new FlightRouteInput();
+                            flightRouteInput.setEu("S");
+                            flightRouteInput.setVisa(false);
+                            flightRouteInput.setDepartureIATACode(arrivalAirports[randomIndex()]);
+                            flightRouteInput.setArrivalIATACode(departureAirports[randomIndex()]);
+                            flightInput.setRoute(flightRouteInput);
+                        }
+                        flightService.save(flightInput);
+                    }
+                } else {
+                    LOGGER.info("Flights is empty!");
+                }
+            } else {
+                LOGGER.info("An error occurred while fetching the flight data!");
+            }
+        };
+    }
+
     private Integer randomIndex() {
         Random random = new Random();
-        return random.nextInt(11);
+        return random.nextInt(10);
     }
 }
