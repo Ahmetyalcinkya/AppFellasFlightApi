@@ -60,7 +60,8 @@ public class FlightService {
         return mongoTemplate.find(Query.query(Criteria.where("airline.$id").is(airlineId).and("isOperationalFlight").is(false)), Flight.class);
     }
 
-    public List<Flight> filterFlight(LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String airlineId, SortProperty sortProperty, SortDirection sortDirection) {
+    //TODO : DEPARTURE VE ARRIVAL AIRPORT ID'LERİNİ EKLEMELİSİN !!
+    public List<Flight> filterFlight(LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String airlineId, SortProperty sortProperty, SortDirection sortDirection, String departureAirportIATA ,String arrivalAirportIATA) {
         Criteria criteria = new Criteria();
         if (startDate != null && endDate != null) {
             if (startDate.isAfter(endDate)) {
@@ -90,6 +91,13 @@ public class FlightService {
         }
         if (airlineId != null && !airlineId.isEmpty()) {
             criteria = criteria.and("airline.$id").is(airlineId);
+        }
+        if (departureAirportIATA != null && arrivalAirportIATA != null) {
+            criteria = criteria.and("route.departureIATACode").is(departureAirportIATA).and("route.arrivalIATACode").is(arrivalAirportIATA);
+        } else if (departureAirportIATA != null && arrivalAirportIATA == null) {
+            criteria = criteria.and("route.departureIATACode").is(departureAirportIATA);
+        } else if (departureAirportIATA == null && arrivalAirportIATA != null) {
+            criteria = criteria.and("route.arrivalIATACode").is(arrivalAirportIATA);
         }
         Sort.Direction direction = Sort.Direction.valueOf(sortDirection.name());
         Sort sort = Sort.by(direction, sortProperty == null ? "scheduledDateTime" : "price");
