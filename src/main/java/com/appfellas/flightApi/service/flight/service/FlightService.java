@@ -60,7 +60,6 @@ public class FlightService {
         return mongoTemplate.find(Query.query(Criteria.where("airline.$id").is(airlineId).and("isOperationalFlight").is(false)), Flight.class);
     }
 
-    //TODO : DEPARTURE VE ARRIVAL AIRPORT ID'LERİNİ EKLEMELİSİN !!
     public List<Flight> filterFlight(LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String airlineId, SortProperty sortProperty, SortDirection sortDirection, String departureAirportIATA ,String arrivalAirportIATA) {
         Criteria criteria = new Criteria();
         if (startDate != null && endDate != null) {

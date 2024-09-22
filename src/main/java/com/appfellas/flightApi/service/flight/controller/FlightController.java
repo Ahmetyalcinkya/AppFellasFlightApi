@@ -64,8 +64,8 @@ public class FlightController {
 
     @PreAuthorize("isAnonymous()")
     @GetMapping("/filter-flights")
-    public ResponseEntity<List<FlightResponse>> filterFlightByAirline(@RequestParam(name = "startDate") LocalDate startDate, @RequestParam(name = "endDate") LocalDate endDate, @RequestParam(name = "startTime") LocalTime startTime, @RequestParam(name = "endTime") LocalTime endTime, @RequestParam(name = "airline") String airlineId, @RequestParam(name = "property") String property, @RequestParam(name = "direction") String direction) {
-        return ResponseEntity.ok().body(flightService.filterFlight(startDate, endDate, startTime, endTime, airlineId, SortProperty.valueOf(property), SortDirection.valueOf(direction)).stream().map(EntityMapper::flight).toList());
+    public ResponseEntity<List<FlightResponse>> filterFlightByAirline(@RequestParam(name = "startDate") LocalDate startDate, @RequestParam(name = "endDate") LocalDate endDate, @RequestParam(name = "startTime") LocalTime startTime, @RequestParam(name = "endTime") LocalTime endTime, @RequestParam(name = "airline") String airlineId, @RequestParam(name = "property") String property, @RequestParam(name = "direction") String direction, @RequestParam(name = "departureAirportIATA") String departureAirportIATA, @RequestParam(name = "arrivalAirportIATA") String arrivalAirportIATA) {
+        return ResponseEntity.ok().body(flightService.filterFlight(startDate, endDate, startTime, endTime, airlineId, SortProperty.valueOf(property), SortDirection.valueOf(direction), departureAirportIATA, arrivalAirportIATA).stream().map(EntityMapper::flight).toList());
     }
 
     @PreAuthorize("hasRole('ADMIN')")
