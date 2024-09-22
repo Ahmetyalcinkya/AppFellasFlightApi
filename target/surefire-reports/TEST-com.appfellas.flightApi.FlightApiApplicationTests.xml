@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.appfellas.flightApi.FlightApiApplicationTests" time="3.205" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.appfellas.flightApi.FlightApiApplicationTests" time="3.12" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi/target/surefire/surefirebooter-20240922173103967_3.jar /home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi/target/surefire 2024-09-22T17-31-03_903-jvmRun1 surefire-20240922173103967_1tmp surefire_0-20240922173103967_2tmp"/>
+    <property name="sun.java.command" value="/home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi/target/surefire/surefirebooter-20240923023825289_3.jar /home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi/target/surefire 2024-09-23T02-38-25_228-jvmRun1 surefire-20240923023825289_1tmp surefire_0-20240923023825289_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi/target/test-classes:/home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi/target/classes:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter-data-mongodb/3.3.3/spring-boot-starter-data-mongodb-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter/3.3.3/spring-boot-starter-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot/3.3.3/spring-boot-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.3/spring-boot-autoconfigure-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.3.3/spring-boot-starter-logging-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/ch/qos/logback/logback-classic/1.5.7/logback-classic-1.5.7.jar:/home/ahmetyalcinkaya/.m2/repository/ch/qos/logback/logback-core/1.5.7/logback-core-1.5.7.jar:/home/ahmetyalcinkaya/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.23.1/log4j-to-slf4j-2.23.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/apache/logging/log4j/log4j-api/2.23.1/log4j-api-2.23.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/slf4j/jul-to-slf4j/2.0.16/jul-to-slf4j-2.0.16.jar:/home/ahmetyalcinkaya/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/yaml/snakeyaml/2.2/snakeyaml-2.2.jar:/home/ahmetyalcinkaya/.m2/repository/org/mongodb/mongodb-driver-sync/5.0.1/mongodb-driver-sync-5.0.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/mongodb/bson/5.0.1/bson-5.0.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/mongodb/mongodb-driver-core/5.0.1/mongodb-driver-core-5.0.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/mongodb/bson-record-codec/5.0.1/bson-record-codec-5.0.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/data/spring-data-mongodb/4.3.3/spring-data-mongodb-4.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-tx/6.1.12/spring-tx-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-context/6.1.12/spring-context-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-beans/6.1.12/spring-beans-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-expression/6.1.12/spring-expression-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/data/spring-data-commons/3.3.3/spring-data-commons-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/slf4j/slf4j-api/2.0.16/slf4j-api-2.0.16.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.3.3/spring-boot-starter-web-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.3.3/spring-boot-starter-json-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.17.2/jackson-datatype-jdk8-2.17.2.jar:/home/ahmetyalcinkaya/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.17.2/jackson-datatype-jsr310-2.17.2.jar:/home/ahmetyalcinkaya/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.17.2/jackson-module-parameter-names-2.17.2.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.3.3/spring-boot-starter-tomcat-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.28/tomcat-embed-core-10.1.28.jar:/home/ahmetyalcinkaya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.28/tomcat-embed-websocket-10.1.28.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-web/6.1.12/spring-web-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/io/micrometer/micrometer-observation/1.13.3/micrometer-observation-1.13.3.jar:/home/ahmetyalcinkaya/.m2/repository/io/micrometer/micrometer-commons/1.13.3/micrometer-commons-1.13.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-webmvc/6.1.12/spring-webmvc-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter-validation/3.3.3/spring-boot-starter-validation-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.28/tomcat-embed-el-10.1.28.jar:/home/ahmetyalcinkaya/.m2/repository/org/hibernate/validator/hibernate-validator/8.0.1.Final/hibernate-validator-8.0.1.Final.jar:/home/ahmetyalcinkaya/.m2/repository/jakarta/validation/jakarta.validation-api/3.0.2/jakarta.validation-api-3.0.2.jar:/home/ahmetyalcinkaya/.m2/repository/org/jboss/logging/jboss-logging/3.5.3.Final/jboss-logging-3.5.3.Final.jar:/home/ahmetyalcinkaya/.m2/repository/com/fasterxml/classmate/1.7.0/classmate-1.7.0.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter-security/3.3.3/spring-boot-starter-security-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-aop/6.1.12/spring-aop-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/security/spring-security-config/6.3.3/spring-security-config-6.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/security/spring-security-web/6.3.3/spring-security-web-6.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/io/jsonwebtoken/jjwt/0.9.1/jjwt-0.9.1.jar:/home/ahmetyalcinkaya/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.17.2/jackson-databind-2.17.2.jar:/home/ahmetyalcinkaya/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.17.2/jackson-annotations-2.17.2.jar:/home/ahmetyalcinkaya/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.17.2/jackson-core-2.17.2.jar:/home/ahmetyalcinkaya/.m2/repository/org/apache/commons/commons-lang3/3.14.0/commons-lang3-3.14.0.jar:/home/ahmetyalcinkaya/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/home/ahmetyalcinkaya/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/home/ahmetyalcinkaya/.m2/repository/com/sun/xml/bind/jaxb-core/2.3.0/jaxb-core-2.3.0.jar:/home/ahmetyalcinkaya/.m2/repository/com/sun/xml/bind/jaxb-impl/2.3.0/jaxb-impl-2.3.0.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-starter-test/3.3.3/spring-boot-starter-test-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-test/3.3.3/spring-boot-test-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/3.3.3/spring-boot-test-autoconfigure-3.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/com/jayway/jsonpath/json-path/2.9.0/json-path-2.9.0.jar:/home/ahmetyalcinkaya/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/4.0.2/jakarta.xml.bind-api-4.0.2.jar:/home/ahmetyalcinkaya/.m2/repository/jakarta/activation/jakarta.activation-api/2.1.3/jakarta.activation-api-2.1.3.jar:/home/ahmetyalcinkaya/.m2/repository/net/minidev/json-smart/2.5.1/json-smart-2.5.1.jar:/home/ahmetyalcinkaya/.m2/repository/net/minidev/accessors-smart/2.5.1/accessors-smart-2.5.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/ow2/asm/asm/9.6/asm-9.6.jar:/home/ahmetyalcinkaya/.m2/repository/org/assertj/assertj-core/3.25.3/assertj-core-3.25.3.jar:/home/ahmetyalcinkaya/.m2/repository/net/bytebuddy/byte-buddy/1.14.19/byte-buddy-1.14.19.jar:/home/ahmetyalcinkaya/.m2/repository/org/awaitility/awaitility/4.2.2/awaitility-4.2.2.jar:/home/ahmetyalcinkaya/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar:/home/ahmetyalcinkaya/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.3/junit-jupiter-5.10.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.3/junit-jupiter-api-5.10.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/ahmetyalcinkaya/.m2/repository/org/junit/platform/junit-platform-commons/1.10.3/junit-platform-commons-1.10.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/ahmetyalcinkaya/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.3/junit-jupiter-params-5.10.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.3/junit-jupiter-engine-5.10.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/junit/platform/junit-platform-engine/1.10.3/junit-platform-engine-1.10.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/mockito/mockito-core/5.11.0/mockito-core-5.11.0.jar:/home/ahmetyalcinkaya/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.19/byte-buddy-agent-1.14.19.jar:/home/ahmetyalcinkaya/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/mockito/mockito-junit-jupiter/5.11.0/mockito-junit-jupiter-5.11.0.jar:/home/ahmetyalcinkaya/.m2/repository/org/skyscreamer/jsonassert/1.5.3/jsonassert-1.5.3.jar:/home/ahmetyalcinkaya/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-core/6.1.12/spring-core-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-jcl/6.1.12/spring-jcl-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/spring-test/6.1.12/spring-test-6.1.12.jar:/home/ahmetyalcinkaya/.m2/repository/org/xmlunit/xmlunit-core/2.9.1/xmlunit-core-2.9.1.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/security/spring-security-test/6.3.3/spring-security-test-6.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/security/spring-security-core/6.3.3/spring-security-core-6.3.3.jar:/home/ahmetyalcinkaya/.m2/repository/org/springframework/security/spring-security-crypto/6.3.3/spring-security-crypto-6.3.3.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="FILE_LOG_CHARSET" value="UTF-8"/>
     <property name="java.awt.headless" value="true"/>
-    <property name="surefire.real.class.path" value="/home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi/target/surefire/surefirebooter-20240922173103967_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi/target/surefire/surefirebooter-20240923023825289_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.12+7-Ubuntu-1ubuntu224.04"/>
     <property name="user.name" value="ahmetyalcinkaya"/>
@@ -48,7 +48,7 @@
     <property name="user.dir" value="/home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi"/>
     <property name="os.arch" value="amd64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="PID" value="26148"/>
+    <property name="PID" value="17601"/>
     <property name="CONSOLE_LOG_CHARSET" value="UTF-8"/>
     <property name="native.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib"/>
@@ -59,9 +59,9 @@
     <property name="java.class.version" value="61.0"/>
     <property name="LOGGED_APPLICATION_NAME" value="[AppFellas Flight API] "/>
   </properties>
-  <testcase name="contextLoads" classname="com.appfellas.flightApi.FlightApiApplicationTests" time="0.468">
-    <system-out><![CDATA[17:31:04.388 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appfellas.flightApi.FlightApiApplicationTests]: FlightApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:31:04.445 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appfellas.flightApi.FlightApiApplication for test class com.appfellas.flightApi.FlightApiApplicationTests
+  <testcase name="contextLoads" classname="com.appfellas.flightApi.FlightApiApplicationTests" time="0.458">
+    <system-out><![CDATA[02:38:25.728 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.appfellas.flightApi.FlightApiApplicationTests]: FlightApiApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:38:25.794 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.appfellas.flightApi.FlightApiApplication for test class com.appfellas.flightApi.FlightApiApplicationTests
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -72,533 +72,531 @@
 
  :: Spring Boot ::                (v3.3.3)
 
-2024-09-22T17:31:04.659+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.a.flightApi.FlightApiApplicationTests  : Starting FlightApiApplicationTests using Java 17.0.12 with PID 26148 (started by ahmetyalcinkaya in /home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi)
-2024-09-22T17:31:04.660+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.a.flightApi.FlightApiApplicationTests  : No active profile set, falling back to 1 default profile: "default"
-2024-09-22T17:31:05.086+03:00  INFO 26148 --- [AppFellas Flight API] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-2024-09-22T17:31:05.119+03:00  INFO 26148 --- [AppFellas Flight API] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 4 MongoDB repository interfaces.
-2024-09-22T17:31:05.405+03:00  INFO 26148 --- [AppFellas Flight API] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.8.0-45-generic"}, "platform": "Java/Ubuntu/17.0.12+7-Ubuntu-1ubuntu224.04"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@45e617c4, com.mongodb.Jep395RecordCodecProvider@5042e3d0, com.mongodb.KotlinCodecProvider@1c34365c]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
-2024-09-22T17:31:05.434+03:00  INFO 26148 --- [AppFellas Flight API] [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=17609745}
-2024-09-22T17:31:06.140+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.a.flightApi.FlightApiApplicationTests  : Started FlightApiApplicationTests in 1.63 seconds (process running for 2.121)
-2024-09-22T17:31:06.210+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Istanbul Airport -> Airport already created!
-2024-09-22T17:31:06.214+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Sabiha Gokcen International Airport -> Airport already created!
-2024-09-22T17:31:06.217+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Antalya Airport -> Airport already created!
-2024-09-22T17:31:06.220+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Izmir Adnan Menderes Airport -> Airport already created!
-2024-09-22T17:31:06.222+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Ankara Esenboga Airport -> Airport already created!
-2024-09-22T17:31:06.225+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : London Heathrow Airport -> Airport already created!
-2024-09-22T17:31:06.227+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Paris Charles de Gaulle Airport -> Airport already created!
-2024-09-22T17:31:06.230+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Amsterdam Schiphol Airport -> Airport already created!
-2024-09-22T17:31:06.232+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Dubai International Airport -> Airport already created!
-2024-09-22T17:31:06.235+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : New York John F. Kennedy International Airport -> Airport already created!
-2024-09-22T17:31:06.238+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Los Angeles International Airport -> Airport already created!
-2024-09-22T17:31:06.241+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Tokyo Haneda Airport -> Airport already created!
-2024-09-22T17:31:06.243+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Singapore Changi Airport -> Airport already created!
-2024-09-22T17:31:06.247+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Sydney Kingsford Smith Airport -> Airport already created!
-2024-09-22T17:31:06.249+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Hong Kong International Airport -> Airport already created!
-2024-09-22T17:31:06.251+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Munich Airport -> Airport already created!
-2024-09-22T17:31:06.254+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Zurich Airport -> Airport already created!
-2024-09-22T17:31:06.257+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Rome Leonardo da Vinci International Airport -> Airport already created!
-2024-09-22T17:31:06.259+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Beijing Capital International Airport -> Airport already created!
-2024-09-22T17:31:06.262+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Moscow Sheremetyevo International Airport -> Airport already created!
-{flights=[{lastUpdatedAt=2024-09-22T02:20:12.174+02:00, actualLandingTime=2024-09-22T00:27:41.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[2]}, codeshares={codeshares=[KL2533]}, estimatedLandingTime=2024-09-22T00:27:41.000+02:00, expectedTimeOnBelt=2024-09-22T00:52:15.000+02:00, flightDirection=A, flightName=HV6920, flightNumber=6920, id=140702903160577680, isOperationalFlight=true, mainFlight=HV6920, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR, EXP]}, route={destinations=[HER], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:05:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:05:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:20:12.174+02:00, actualLandingTime=2024-09-22T00:27:41.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[2]}, codeshares={codeshares=[KL2533]}, estimatedLandingTime=2024-09-22T00:27:41.000+02:00, expectedTimeOnBelt=2024-09-22T00:52:15.000+02:00, flightDirection=A, flightName=KL2533, flightNumber=2533, id=140702903538742106, isOperationalFlight=true, mainFlight=HV6920, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[ARR, EXP]}, route={destinations=[HER], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:05:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:05:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:46:39.093+02:00, actualLandingTime=2024-09-22T00:41:30.000+02:00, aircraftType={iataMain=737, iataSub=7M8}, baggageClaim={belts=[17]}, estimatedLandingTime=2024-09-22T00:41:30.000+02:00, expectedTimeOnBelt=2024-09-22T01:19:09.187+02:00, flightDirection=A, flightName=OR1668, flightNumber=1668, id=140702904115885358, isOperationalFlight=true, mainFlight=OR1668, prefixIATA=OR, prefixICAO=TFL, airlineCode=231, publicFlightState={flightStates=[ARR, EXP]}, route={destinations=[TFS], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:05:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:05:00, serviceType=J, terminal=3, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:10:49.184+02:00, actualLandingTime=2024-09-22T00:20:43.000+02:00, aircraftType={iataMain=32S, iataSub=32Q}, baggageClaim={belts=[4]}, estimatedLandingTime=2024-09-22T00:20:43.000+02:00, expectedTimeOnBelt=2024-09-22T00:56:27.000+02:00, flightDirection=A, flightName=HV5518, flightNumber=5518, id=140702903160465364, isOperationalFlight=true, mainFlight=HV5518, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR]}, route={destinations=[PFO], eu=E, visa=false}, scheduleDateTime=2024-09-22T00:20:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:20:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:34:11.230+02:00, actualLandingTime=2024-09-22T00:23:38.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, codeshares={codeshares=[DL7501, KL2591]}, estimatedLandingTime=2024-09-22T00:23:38.000+02:00, expectedTimeOnBelt=2024-09-22T00:56:26.000+02:00, flightDirection=A, flightName=HV6672, flightNumber=6672, id=140702903160569840, isOperationalFlight=true, mainFlight=HV6672, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR]}, route={destinations=[TFS], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:25:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:25:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:34:11.230+02:00, actualLandingTime=2024-09-22T00:23:38.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, codeshares={codeshares=[DL7501, KL2591]}, estimatedLandingTime=2024-09-22T00:23:38.000+02:00, expectedTimeOnBelt=2024-09-22T00:56:26.000+02:00, flightDirection=A, flightName=DL7501, flightNumber=7501, id=140702902568433012, isOperationalFlight=true, mainFlight=HV6672, prefixIATA=DL, prefixICAO=DAL, airlineCode=58, publicFlightState={flightStates=[ARR]}, route={destinations=[TFS], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:25:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:25:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:34:11.230+02:00, actualLandingTime=2024-09-22T00:23:38.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, codeshares={codeshares=[DL7501, KL2591]}, estimatedLandingTime=2024-09-22T00:23:38.000+02:00, expectedTimeOnBelt=2024-09-22T00:56:26.000+02:00, flightDirection=A, flightName=KL2591, flightNumber=2591, id=140702903538742546, isOperationalFlight=true, mainFlight=HV6672, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[ARR]}, route={destinations=[TFS], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:25:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:25:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T03:03:22.158+02:00, actualLandingTime=2024-09-22T01:03:16.000+02:00, aircraftType={iataMain=32S, iataSub=32Q}, baggageClaim={belts=[2]}, estimatedLandingTime=2024-09-22T01:03:16.000+02:00, expectedTimeOnBelt=2024-09-22T01:59:13.000+02:00, flightDirection=A, flightName=HV6862, flightNumber=6862, id=140702903160575242, isOperationalFlight=true, mainFlight=HV6862, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR, EXP]}, route={destinations=[ATH], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:25:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:25:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T01:07:12.081+02:00, actualOffBlockTime=2024-09-22T00:44:27.000+02:00, aircraftRegistration=PHMPS, aircraftType={iataMain=74F, iataSub=74Y}, flightDirection=D, flightName=MP6161, flightNumber=6161, id=140702903831505713, isOperationalFlight=true, mainFlight=MP6161, prefixIATA=MP, prefixICAO=MPH, airlineCode=122, publicEstimatedOffBlockTime=2024-09-22T00:40:00.000+02:00, publicFlightState={flightStates=[DEP, DEL]}, route={destinations=[MIA, BOG], eu=N, visa=false}, scheduleDateTime=2024-09-22T00:30:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:30:00, serviceType=F, schemaVersion=4}, {lastUpdatedAt=2024-09-22T01:58:40.168+02:00, actualLandingTime=2024-09-22T00:18:51.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[6]}, codeshares={codeshares=[KL2588]}, estimatedLandingTime=2024-09-22T00:18:51.000+02:00, expectedTimeOnBelt=2024-09-22T00:55:49.000+02:00, flightDirection=A, flightName=HV6004, flightNumber=6004, id=140702903160552898, isOperationalFlight=true, mainFlight=HV6004, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR, EXP]}, route={destinations=[OPO], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:30:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:30:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T01:58:40.168+02:00, actualLandingTime=2024-09-22T00:18:51.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[6]}, codeshares={codeshares=[KL2588]}, estimatedLandingTime=2024-09-22T00:18:51.000+02:00, expectedTimeOnBelt=2024-09-22T00:55:49.000+02:00, flightDirection=A, flightName=KL2588, flightNumber=2588, id=140702903538742486, isOperationalFlight=true, mainFlight=HV6004, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[ARR, EXP]}, route={destinations=[OPO], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:30:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:30:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:30:42.276+02:00, actualLandingTime=2024-09-22T00:38:29.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[6]}, codeshares={codeshares=[DL7509, KL2573]}, estimatedLandingTime=2024-09-22T00:38:29.000+02:00, expectedTimeOnBelt=2024-09-22T01:19:31.000+02:00, flightDirection=A, flightName=HV5666, flightNumber=5666, id=140702903160468468, isOperationalFlight=true, mainFlight=HV5666, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR]}, route={destinations=[LPA], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:30:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:30:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:30:42.276+02:00, actualLandingTime=2024-09-22T00:38:29.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[6]}, codeshares={codeshares=[DL7509, KL2573]}, estimatedLandingTime=2024-09-22T00:38:29.000+02:00, expectedTimeOnBelt=2024-09-22T01:19:31.000+02:00, flightDirection=A, flightName=DL7509, flightNumber=7509, id=140702902568433028, isOperationalFlight=true, mainFlight=HV5666, prefixIATA=DL, prefixICAO=DAL, airlineCode=58, publicFlightState={flightStates=[ARR]}, route={destinations=[LPA], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:30:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:30:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:30:42.276+02:00, actualLandingTime=2024-09-22T00:38:29.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[6]}, codeshares={codeshares=[DL7509, KL2573]}, estimatedLandingTime=2024-09-22T00:38:29.000+02:00, expectedTimeOnBelt=2024-09-22T01:19:31.000+02:00, flightDirection=A, flightName=KL2573, flightNumber=2573, id=140702903538742402, isOperationalFlight=true, mainFlight=HV5666, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[ARR]}, route={destinations=[LPA], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:30:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:30:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:23:09.197+02:00, actualLandingTime=2024-09-22T00:25:56.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[19]}, estimatedLandingTime=2024-09-22T00:25:56.000+02:00, expectedTimeOnBelt=2024-09-22T01:29:46.804+02:00, flightDirection=A, flightName=OR3124, flightNumber=3124, id=140702904116073976, isOperationalFlight=true, mainFlight=OR3124, prefixIATA=OR, prefixICAO=TFL, airlineCode=231, publicFlightState={flightStates=[ARR, EXP]}, route={destinations=[ADB], eu=N, visa=false}, scheduleDateTime=2024-09-22T00:40:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:40:00, serviceType=J, terminal=4, schemaVersion=4}, {lastUpdatedAt=2024-09-22T03:13:03.170+02:00, actualLandingTime=2024-09-22T01:06:59.000+02:00, aircraftType={iataMain=32S, iataSub=32Q}, baggageClaim={belts=[4]}, estimatedLandingTime=2024-09-22T01:06:59.000+02:00, expectedTimeOnBelt=2024-09-22T01:40:12.187+02:00, flightDirection=A, flightName=HV5764, flightNumber=5764, id=140702903160471202, isOperationalFlight=true, mainFlight=HV5764, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR, EXP]}, route={destinations=[GRO], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:40:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:40:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:58:10.600+02:00, actualLandingTime=2024-09-22T00:47:44.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, codeshares={codeshares=[KL2526]}, estimatedLandingTime=2024-09-22T00:47:44.000+02:00, expectedTimeOnBelt=2024-09-22T01:18:36.197+02:00, flightDirection=A, flightName=HV5680, flightNumber=5680, id=140702903160468604, isOperationalFlight=true, mainFlight=HV5680, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR]}, route={destinations=[IBZ], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:55:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:55:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:58:10.600+02:00, actualLandingTime=2024-09-22T00:47:44.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, codeshares={codeshares=[KL2526]}, estimatedLandingTime=2024-09-22T00:47:44.000+02:00, expectedTimeOnBelt=2024-09-22T01:18:36.197+02:00, flightDirection=A, flightName=KL2526, flightNumber=2526, id=140702903538742038, isOperationalFlight=true, mainFlight=HV5680, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[ARR]}, route={destinations=[IBZ], eu=S, visa=false}, scheduleDateTime=2024-09-22T00:55:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=00:55:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-22T02:44:43.141+02:00, actualLandingTime=2024-09-22T01:09:29.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[18]}, estimatedLandingTime=2024-09-22T01:09:29.000+02:00, expectedTimeOnBelt=2024-09-22T02:08:38.281+02:00, flightDirection=A, flightName=HV6642, flightNumber=6642, id=140702903160569618, isOperationalFlight=true, mainFlight=HV6642, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR]}, route={destinations=[TBS], eu=N, visa=false}, scheduleDateTime=2024-09-22T01:00:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=01:00:00, serviceType=J, terminal=3, schemaVersion=4}, {lastUpdatedAt=2024-09-22T03:04:08.203+02:00, actualLandingTime=2024-09-22T01:00:55.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[6]}, codeshares={codeshares=[KL2634]}, estimatedLandingTime=2024-09-22T01:00:55.000+02:00, expectedTimeOnBelt=2024-09-22T01:29:09.210+02:00, flightDirection=A, flightName=HV6148, flightNumber=6148, id=140702903160555940, isOperationalFlight=true, mainFlight=HV6148, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[ARR]}, route={destinations=[ALC], eu=S, visa=false}, scheduleDateTime=2024-09-22T01:00:00.000+02:00, scheduleDate=2024-09-22, scheduleTime=01:00:00, serviceType=J, terminal=1, schemaVersion=4}]}
-Key: lastUpdatedAtValue: 2024-09-22T02:20:12.174+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:27:41.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+2024-09-23T02:38:26.048+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.a.flightApi.FlightApiApplicationTests  : Starting FlightApiApplicationTests using Java 17.0.12 with PID 17601 (started by ahmetyalcinkaya in /home/ahmetyalcinkaya/projects/JavaProjects/AppFellasFlightApi)
+2024-09-23T02:38:26.050+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.a.flightApi.FlightApiApplicationTests  : No active profile set, falling back to 1 default profile: "default"
+2024-09-23T02:38:26.503+03:00  INFO 17601 --- [AppFellas Flight API] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-09-23T02:38:26.537+03:00  INFO 17601 --- [AppFellas Flight API] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 4 MongoDB repository interfaces.
+2024-09-23T02:38:26.812+03:00  INFO 17601 --- [AppFellas Flight API] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.0.1"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.8.0-45-generic"}, "platform": "Java/Ubuntu/17.0.12+7-Ubuntu-1ubuntu224.04"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@2574a9e3, com.mongodb.Jep395RecordCodecProvider@18b6d3c1, com.mongodb.KotlinCodecProvider@422ab737]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+2024-09-23T02:38:26.830+03:00  INFO 17601 --- [AppFellas Flight API] [localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=10106327}
+2024-09-23T02:38:27.500+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.a.flightApi.FlightApiApplicationTests  : Started FlightApiApplicationTests in 1.63 seconds (process running for 2.172)
+2024-09-23T02:38:27.553+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Admin account created -> Email: ahmetcan.yalcinkaya55@gmail.com / Password: Ahmet123.
+2024-09-23T02:38:27.556+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : App Fellas admin account created -> Email: admin@appfellas.com / Password: APPFELLAS
+2024-09-23T02:38:27.595+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : App Fellas user account created -> Email: user@appfellas.com / Password: APPFELLASUSER
+2024-09-23T02:38:27.602+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Istanbul Airport -> Airport already created!
+2024-09-23T02:38:27.605+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Sabiha Gokcen International Airport -> Airport already created!
+2024-09-23T02:38:27.607+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Antalya Airport -> Airport already created!
+2024-09-23T02:38:27.611+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Izmir Adnan Menderes Airport -> Airport already created!
+2024-09-23T02:38:27.613+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Ankara Esenboga Airport -> Airport already created!
+2024-09-23T02:38:27.615+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : London Heathrow Airport -> Airport already created!
+2024-09-23T02:38:27.618+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Paris Charles de Gaulle Airport -> Airport already created!
+2024-09-23T02:38:27.620+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Amsterdam Schiphol Airport -> Airport already created!
+2024-09-23T02:38:27.622+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Dubai International Airport -> Airport already created!
+2024-09-23T02:38:27.623+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : New York John F. Kennedy International Airport -> Airport already created!
+2024-09-23T02:38:27.625+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Los Angeles International Airport -> Airport already created!
+2024-09-23T02:38:27.626+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Tokyo Haneda Airport -> Airport already created!
+2024-09-23T02:38:27.628+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Singapore Changi Airport -> Airport already created!
+2024-09-23T02:38:27.629+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Sydney Kingsford Smith Airport -> Airport already created!
+2024-09-23T02:38:27.631+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Hong Kong International Airport -> Airport already created!
+2024-09-23T02:38:27.632+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Munich Airport -> Airport already created!
+2024-09-23T02:38:27.634+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Zurich Airport -> Airport already created!
+2024-09-23T02:38:27.635+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Rome Leonardo da Vinci International Airport -> Airport already created!
+2024-09-23T02:38:27.638+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Beijing Capital International Airport -> Airport already created!
+2024-09-23T02:38:27.640+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Moscow Sheremetyevo International Airport -> Airport already created!
+2024-09-23T02:38:27.643+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : TK -> Airline has been added!
+2024-09-23T02:38:27.646+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : LH -> Airline has been added!
+2024-09-23T02:38:27.649+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : EK -> Airline has been added!
+2024-09-23T02:38:27.651+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : QR -> Airline has been added!
+2024-09-23T02:38:27.653+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : AA -> Airline has been added!
+2024-09-23T02:38:27.655+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : BA -> Airline has been added!
+2024-09-23T02:38:27.657+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : AF -> Airline has been added!
+2024-09-23T02:38:27.660+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : KL -> Airline has been added!
+2024-09-23T02:38:27.662+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : SQ -> Airline has been added!
+2024-09-23T02:38:27.664+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : LX -> Airline has been added!
+2024-09-23T02:38:27.666+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : JL -> Airline has been added!
+2024-09-23T02:38:27.668+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : DL -> Airline has been added!
+2024-09-23T02:38:27.670+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : SU -> Airline has been added!
+2024-09-23T02:38:27.672+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : EY -> Airline has been added!
+2024-09-23T02:38:27.674+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : CX -> Airline has been added!
+2024-09-23T02:38:27.679+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => TK4014 has been created.
+2024-09-23T02:38:27.682+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => AA1578 has been created.
+2024-09-23T02:38:27.686+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => LH542 has been created.
+2024-09-23T02:38:27.690+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => BA985 has been created.
+2024-09-23T02:38:27.696+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => DL4532 has been created.
+2024-09-23T02:38:27.700+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => TK863 has been created.
+2024-09-23T02:38:27.704+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => TK967 has been created.
+2024-09-23T02:38:27.707+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => KL1923 has been created.
+2024-09-23T02:38:27.711+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => AA678 has been created.
+2024-09-23T02:38:27.713+03:00  INFO 17601 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => TK9310 has been created.
+{flights=[{lastUpdatedAt=2024-09-23T01:22:26.322+02:00, actualLandingTime=2024-09-23T00:20:50.000+02:00, aircraftType={iataMain=32S, iataSub=32Q}, baggageClaim={belts=[2]}, codeshares={codeshares=[DL7498, KL2756]}, estimatedLandingTime=2024-09-23T00:21:04.000+02:00, expectedTimeOnBelt=2024-09-23T01:08:57.000+02:00, flightDirection=A, flightName=HV5314, flightNumber=5314, id=140709928119367722, isOperationalFlight=true, mainFlight=HV5314, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[LCA], eu=E, visa=false}, scheduleDateTime=2024-09-23T00:00:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:00:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:22:26.322+02:00, actualLandingTime=2024-09-23T00:20:50.000+02:00, aircraftType={iataMain=32S, iataSub=32Q}, baggageClaim={belts=[2]}, codeshares={codeshares=[DL7498, KL2756]}, estimatedLandingTime=2024-09-23T00:21:04.000+02:00, expectedTimeOnBelt=2024-09-23T01:08:57.000+02:00, flightDirection=A, flightName=DL7498, flightNumber=7498, id=140709927527338796, isOperationalFlight=true, mainFlight=HV5314, prefixIATA=DL, prefixICAO=DAL, airlineCode=58, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[LCA], eu=E, visa=false}, scheduleDateTime=2024-09-23T00:00:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:00:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:22:26.322+02:00, actualLandingTime=2024-09-23T00:20:50.000+02:00, aircraftType={iataMain=32S, iataSub=32Q}, baggageClaim={belts=[2]}, codeshares={codeshares=[DL7498, KL2756]}, estimatedLandingTime=2024-09-23T00:21:04.000+02:00, expectedTimeOnBelt=2024-09-23T01:08:57.000+02:00, flightDirection=A, flightName=KL2756, flightNumber=2756, id=140709928497655578, isOperationalFlight=true, mainFlight=HV5314, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[LCA], eu=E, visa=false}, scheduleDateTime=2024-09-23T00:00:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:00:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:26:54.372+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, codeshares={codeshares=[KL2588]}, estimatedLandingTime=2024-09-23T02:36:00.000+02:00, flightDirection=A, flightName=HV6004, flightNumber=6004, id=140709928119460740, isOperationalFlight=true, mainFlight=HV6004, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[AIR, EXP]}, route={destinations=[OPO], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:05:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:05:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:26:54.372+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, codeshares={codeshares=[KL2588]}, estimatedLandingTime=2024-09-23T02:36:00.000+02:00, flightDirection=A, flightName=KL2588, flightNumber=2588, id=140709928497650328, isOperationalFlight=true, mainFlight=HV6004, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[AIR, EXP]}, route={destinations=[OPO], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:05:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:05:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T00:38:20.455+02:00, actualLandingTime=2024-09-23T00:24:45.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[6]}, estimatedLandingTime=2024-09-23T00:25:19.000+02:00, expectedTimeOnBelt=2024-09-23T01:03:18.319+02:00, flightDirection=A, flightName=HV5134, flightNumber=5134, id=140709928119362394, isOperationalFlight=true, mainFlight=HV5134, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[LND, EXP]}, route={destinations=[BCN], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:10:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:10:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:22:14.429+02:00, actualLandingTime=2024-09-23T00:26:35.000+02:00, aircraftType={iataMain=32S, iataSub=32Q}, baggageClaim={belts=[2]}, codeshares={codeshares=[KL2652]}, estimatedLandingTime=2024-09-23T00:26:40.000+02:00, expectedTimeOnBelt=2024-09-23T01:16:56.000+02:00, flightDirection=A, flightName=HV6118, flightNumber=6118, id=140709928119463560, isOperationalFlight=true, mainFlight=HV6118, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[AGP], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:10:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:10:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:22:14.429+02:00, actualLandingTime=2024-09-23T00:26:35.000+02:00, aircraftType={iataMain=32S, iataSub=32Q}, baggageClaim={belts=[2]}, codeshares={codeshares=[KL2652]}, estimatedLandingTime=2024-09-23T00:26:40.000+02:00, expectedTimeOnBelt=2024-09-23T01:16:56.000+02:00, flightDirection=A, flightName=KL2652, flightNumber=2652, id=140709928497652832, isOperationalFlight=true, mainFlight=HV6118, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[AGP], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:10:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:10:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T00:39:21.819+02:00, actualLandingTime=2024-09-22T23:58:48.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[2]}, codeshares={codeshares=[KL3282]}, estimatedLandingTime=2024-09-22T23:58:26.000+02:00, expectedTimeOnBelt=2024-09-23T00:38:29.000+02:00, flightDirection=A, flightName=HV5352, flightNumber=5352, id=140709928119368014, isOperationalFlight=true, mainFlight=HV5352, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[FAO], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:15:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:15:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T00:39:21.819+02:00, actualLandingTime=2024-09-22T23:58:48.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[2]}, codeshares={codeshares=[KL3282]}, estimatedLandingTime=2024-09-22T23:58:26.000+02:00, expectedTimeOnBelt=2024-09-23T00:38:29.000+02:00, flightDirection=A, flightName=KL3282, flightNumber=3282, id=140709928497743408, isOperationalFlight=true, mainFlight=HV5352, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[FAO], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:15:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:15:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:01:57.965+02:00, actualLandingTime=2024-09-23T00:15:29.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, estimatedLandingTime=2024-09-23T00:15:07.000+02:00, expectedTimeOnBelt=2024-09-23T00:58:39.000+02:00, flightDirection=A, flightName=HV5078, flightNumber=5078, id=140709928119359960, isOperationalFlight=true, mainFlight=HV5078, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[FIB]}, route={destinations=[RHO], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:20:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:20:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:36:51.045+02:00, actualLandingTime=2024-09-23T01:35:20.000+02:00, aircraftType={iataMain=32S, iataSub=320}, baggageClaim={belts=[18]}, estimatedLandingTime=2024-09-23T01:35:17.000+02:00, flightDirection=A, flightName=OR3008, flightNumber=3008, id=140709929074978940, isOperationalFlight=true, mainFlight=OR3008, prefixIATA=OR, prefixICAO=TFL, airlineCode=231, publicFlightState={flightStates=[LND, EXP]}, route={destinations=[AYT], eu=N, visa=false}, scheduleDateTime=2024-09-23T00:30:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:30:00, serviceType=J, terminal=3, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:05:29.566+02:00, actualLandingTime=2024-09-23T00:19:14.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[16]}, estimatedLandingTime=2024-09-23T00:19:48.000+02:00, expectedTimeOnBelt=2024-09-23T01:34:55.605+02:00, flightDirection=A, flightName=HV5766, flightNumber=5766, id=140709928119379048, isOperationalFlight=true, mainFlight=HV5766, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[GRO], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:35:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:35:00, serviceType=J, terminal=3, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:08:40.675+02:00, actualLandingTime=2024-09-23T00:23:13.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, estimatedLandingTime=2024-09-23T00:23:13.000+02:00, expectedTimeOnBelt=2024-09-23T01:06:19.000+02:00, flightDirection=A, flightName=HV5874, flightNumber=5874, id=140709928119381856, isOperationalFlight=true, mainFlight=HV5874, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[FIB, EXP]}, route={destinations=[SPU], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:35:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:35:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T00:38:11.537+02:00, actualLandingTime=2024-09-23T00:28:00.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[15]}, codeshares={codeshares=[KL2626]}, estimatedLandingTime=2024-09-23T00:28:09.000+02:00, expectedTimeOnBelt=2024-09-23T01:08:09.185+02:00, flightDirection=A, flightName=HV5754, flightNumber=5754, id=140709928119378970, isOperationalFlight=true, mainFlight=HV5754, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[LND, EXP]}, route={destinations=[RAK], eu=N, visa=false}, scheduleDateTime=2024-09-23T00:40:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:40:00, serviceType=J, terminal=3, schemaVersion=4}, {lastUpdatedAt=2024-09-23T00:38:11.537+02:00, actualLandingTime=2024-09-23T00:28:00.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[15]}, codeshares={codeshares=[KL2626]}, estimatedLandingTime=2024-09-23T00:28:09.000+02:00, expectedTimeOnBelt=2024-09-23T01:08:09.185+02:00, flightDirection=A, flightName=KL2626, flightNumber=2626, id=140709928497652618, isOperationalFlight=true, mainFlight=HV5754, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[LND, EXP]}, route={destinations=[RAK], eu=N, visa=false}, scheduleDateTime=2024-09-23T00:40:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:40:00, serviceType=J, terminal=3, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:22:03.377+02:00, actualLandingTime=2024-09-23T01:11:40.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[2]}, codeshares={codeshares=[KL2522]}, estimatedLandingTime=2024-09-23T01:11:57.000+02:00, expectedTimeOnBelt=2024-09-23T01:57:01.255+02:00, flightDirection=A, flightName=HV6338, flightNumber=6338, id=140709928119469184, isOperationalFlight=true, mainFlight=HV6338, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[LND, EXP]}, route={destinations=[VLC], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:40:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:40:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:22:03.377+02:00, actualLandingTime=2024-09-23T01:11:40.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[2]}, codeshares={codeshares=[KL2522]}, estimatedLandingTime=2024-09-23T01:11:57.000+02:00, expectedTimeOnBelt=2024-09-23T01:57:01.255+02:00, flightDirection=A, flightName=KL2522, flightNumber=2522, id=140709928497649872, isOperationalFlight=true, mainFlight=HV6338, prefixIATA=KL, prefixICAO=KLM, airlineCode=100, publicFlightState={flightStates=[LND, EXP]}, route={destinations=[VLC], eu=S, visa=false}, scheduleDateTime=2024-09-23T00:40:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=00:40:00, serviceType=J, terminal=1, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:28:27.488+02:00, actualLandingTime=2024-09-23T01:14:26.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[16]}, estimatedLandingTime=2024-09-23T01:13:59.000+02:00, expectedTimeOnBelt=2024-09-23T02:02:27.247+02:00, flightDirection=A, flightName=OR1508, flightNumber=1508, id=140709929074790018, isOperationalFlight=true, mainFlight=OR1508, prefixIATA=OR, prefixICAO=TFL, airlineCode=231, publicFlightState={flightStates=[LND]}, route={destinations=[PMI], eu=S, visa=false}, scheduleDateTime=2024-09-23T01:10:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=01:10:00, serviceType=J, terminal=3, schemaVersion=4}, {lastUpdatedAt=2024-09-23T01:08:20.436+02:00, actualLandingTime=2024-09-23T00:57:31.000+02:00, aircraftType={iataMain=737, iataSub=73H}, baggageClaim={belts=[4]}, codeshares={codeshares=[KL2745]}, estimatedLandingTime=2024-09-23T00:57:54.000+02:00, expectedTimeOnBelt=2024-09-23T01:35:18.319+02:00, flightDirection=A, flightName=HV6886, flightNumber=6886, id=140709928119483240, isOperationalFlight=true, mainFlight=HV6886, prefixIATA=HV, prefixICAO=TRA, airlineCode=164, publicFlightState={flightStates=[LND, EXP]}, route={destinations=[KEF], eu=S, visa=false}, scheduleDateTime=2024-09-23T01:15:00.000+02:00, scheduleDate=2024-09-23, scheduleTime=01:15:00, serviceType=J, terminal=1, schemaVersion=4}]}
+Key: lastUpdatedAtValue: 2024-09-23T01:22:26.322+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:20:50.000+02:00
+Key: aircraftTypeValue: {iataMain=32S, iataSub=32Q}
 Key: baggageClaimValue: {belts=[2]}
-Key: codesharesValue: {codeshares=[KL2533]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:27:41.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T00:52:15.000+02:00
+Key: codesharesValue: {codeshares=[DL7498, KL2756]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:21:04.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:08:57.000+02:00
 Key: flightDirectionValue: A
-Key: flightNameValue: HV6920
-Key: flightNumberValue: 6920
-Key: idValue: 140702903160577680
+Key: flightNameValue: HV5314
+Key: flightNumberValue: 5314
+Key: idValue: 140709928119367722
 Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6920
+Key: mainFlightValue: HV5314
 Key: prefixIATAValue: HV
 Key: prefixICAOValue: TRA
 Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR, EXP]}
-Key: routeValue: {destinations=[HER], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:05:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:05:00
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[LCA], eu=E, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:00:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:00:00
 Key: serviceTypeValue: J
 Key: terminalValue: 1
 Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:20:12.174+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:27:41.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: lastUpdatedAtValue: 2024-09-23T01:22:26.322+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:20:50.000+02:00
+Key: aircraftTypeValue: {iataMain=32S, iataSub=32Q}
 Key: baggageClaimValue: {belts=[2]}
-Key: codesharesValue: {codeshares=[KL2533]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:27:41.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T00:52:15.000+02:00
+Key: codesharesValue: {codeshares=[DL7498, KL2756]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:21:04.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:08:57.000+02:00
 Key: flightDirectionValue: A
-Key: flightNameValue: KL2533
-Key: flightNumberValue: 2533
-Key: idValue: 140702903538742106
+Key: flightNameValue: DL7498
+Key: flightNumberValue: 7498
+Key: idValue: 140709927527338796
 Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6920
+Key: mainFlightValue: HV5314
+Key: prefixIATAValue: DL
+Key: prefixICAOValue: DAL
+Key: airlineCodeValue: 58
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[LCA], eu=E, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:00:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:00:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:22:26.322+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:20:50.000+02:00
+Key: aircraftTypeValue: {iataMain=32S, iataSub=32Q}
+Key: baggageClaimValue: {belts=[2]}
+Key: codesharesValue: {codeshares=[DL7498, KL2756]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:21:04.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:08:57.000+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: KL2756
+Key: flightNumberValue: 2756
+Key: idValue: 140709928497655578
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV5314
 Key: prefixIATAValue: KL
 Key: prefixICAOValue: KLM
 Key: airlineCodeValue: 100
-Key: publicFlightStateValue: {flightStates=[ARR, EXP]}
-Key: routeValue: {destinations=[HER], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:05:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[LCA], eu=E, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:00:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:00:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:26:54.372+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[4]}
+Key: codesharesValue: {codeshares=[KL2588]}
+Key: estimatedLandingTimeValue: 2024-09-23T02:36:00.000+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: HV6004
+Key: flightNumberValue: 6004
+Key: idValue: 140709928119460740
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV6004
+Key: prefixIATAValue: HV
+Key: prefixICAOValue: TRA
+Key: airlineCodeValue: 164
+Key: publicFlightStateValue: {flightStates=[AIR, EXP]}
+Key: routeValue: {destinations=[OPO], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:05:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
 Key: scheduleTimeValue: 00:05:00
 Key: serviceTypeValue: J
 Key: terminalValue: 1
 Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:46:39.093+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:41:30.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=7M8}
-Key: baggageClaimValue: {belts=[17]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:41:30.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:19:09.187+02:00
+Key: lastUpdatedAtValue: 2024-09-23T01:26:54.372+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[4]}
+Key: codesharesValue: {codeshares=[KL2588]}
+Key: estimatedLandingTimeValue: 2024-09-23T02:36:00.000+02:00
 Key: flightDirectionValue: A
-Key: flightNameValue: OR1668
-Key: flightNumberValue: 1668
-Key: idValue: 140702904115885358
+Key: flightNameValue: KL2588
+Key: flightNumberValue: 2588
+Key: idValue: 140709928497650328
 Key: isOperationalFlightValue: true
-Key: mainFlightValue: OR1668
-Key: prefixIATAValue: OR
-Key: prefixICAOValue: TFL
-Key: airlineCodeValue: 231
-Key: publicFlightStateValue: {flightStates=[ARR, EXP]}
-Key: routeValue: {destinations=[TFS], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:05:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
+Key: mainFlightValue: HV6004
+Key: prefixIATAValue: KL
+Key: prefixICAOValue: KLM
+Key: airlineCodeValue: 100
+Key: publicFlightStateValue: {flightStates=[AIR, EXP]}
+Key: routeValue: {destinations=[OPO], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:05:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
 Key: scheduleTimeValue: 00:05:00
 Key: serviceTypeValue: J
-Key: terminalValue: 3
+Key: terminalValue: 1
 Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:10:49.184+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:20:43.000+02:00
-Key: aircraftTypeValue: {iataMain=32S, iataSub=32Q}
-Key: baggageClaimValue: {belts=[4]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:20:43.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T00:56:27.000+02:00
+Key: lastUpdatedAtValue: 2024-09-23T00:38:20.455+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:24:45.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[6]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:25:19.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:03:18.319+02:00
 Key: flightDirectionValue: A
-Key: flightNameValue: HV5518
-Key: flightNumberValue: 5518
-Key: idValue: 140702903160465364
+Key: flightNameValue: HV5134
+Key: flightNumberValue: 5134
+Key: idValue: 140709928119362394
 Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV5518
+Key: mainFlightValue: HV5134
 Key: prefixIATAValue: HV
 Key: prefixICAOValue: TRA
 Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[PFO], eu=E, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:20:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
+Key: publicFlightStateValue: {flightStates=[LND, EXP]}
+Key: routeValue: {destinations=[BCN], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:10:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:10:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:22:14.429+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:26:35.000+02:00
+Key: aircraftTypeValue: {iataMain=32S, iataSub=32Q}
+Key: baggageClaimValue: {belts=[2]}
+Key: codesharesValue: {codeshares=[KL2652]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:26:40.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:16:56.000+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: HV6118
+Key: flightNumberValue: 6118
+Key: idValue: 140709928119463560
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV6118
+Key: prefixIATAValue: HV
+Key: prefixICAOValue: TRA
+Key: airlineCodeValue: 164
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[AGP], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:10:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:10:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:22:14.429+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:26:35.000+02:00
+Key: aircraftTypeValue: {iataMain=32S, iataSub=32Q}
+Key: baggageClaimValue: {belts=[2]}
+Key: codesharesValue: {codeshares=[KL2652]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:26:40.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:16:56.000+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: KL2652
+Key: flightNumberValue: 2652
+Key: idValue: 140709928497652832
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV6118
+Key: prefixIATAValue: KL
+Key: prefixICAOValue: KLM
+Key: airlineCodeValue: 100
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[AGP], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:10:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:10:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T00:39:21.819+02:00
+Key: actualLandingTimeValue: 2024-09-22T23:58:48.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[2]}
+Key: codesharesValue: {codeshares=[KL3282]}
+Key: estimatedLandingTimeValue: 2024-09-22T23:58:26.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T00:38:29.000+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: HV5352
+Key: flightNumberValue: 5352
+Key: idValue: 140709928119368014
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV5352
+Key: prefixIATAValue: HV
+Key: prefixICAOValue: TRA
+Key: airlineCodeValue: 164
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[FAO], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:15:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:15:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T00:39:21.819+02:00
+Key: actualLandingTimeValue: 2024-09-22T23:58:48.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[2]}
+Key: codesharesValue: {codeshares=[KL3282]}
+Key: estimatedLandingTimeValue: 2024-09-22T23:58:26.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T00:38:29.000+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: KL3282
+Key: flightNumberValue: 3282
+Key: idValue: 140709928497743408
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV5352
+Key: prefixIATAValue: KL
+Key: prefixICAOValue: KLM
+Key: airlineCodeValue: 100
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[FAO], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:15:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:15:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:01:57.965+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:15:29.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[4]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:15:07.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T00:58:39.000+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: HV5078
+Key: flightNumberValue: 5078
+Key: idValue: 140709928119359960
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV5078
+Key: prefixIATAValue: HV
+Key: prefixICAOValue: TRA
+Key: airlineCodeValue: 164
+Key: publicFlightStateValue: {flightStates=[FIB]}
+Key: routeValue: {destinations=[RHO], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:20:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
 Key: scheduleTimeValue: 00:20:00
 Key: serviceTypeValue: J
 Key: terminalValue: 1
 Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:34:11.230+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:23:38.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[4]}
-Key: codesharesValue: {codeshares=[DL7501, KL2591]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:23:38.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T00:56:26.000+02:00
+Key: lastUpdatedAtValue: 2024-09-23T01:36:51.045+02:00
+Key: actualLandingTimeValue: 2024-09-23T01:35:20.000+02:00
+Key: aircraftTypeValue: {iataMain=32S, iataSub=320}
+Key: baggageClaimValue: {belts=[18]}
+Key: estimatedLandingTimeValue: 2024-09-23T01:35:17.000+02:00
 Key: flightDirectionValue: A
-Key: flightNameValue: HV6672
-Key: flightNumberValue: 6672
-Key: idValue: 140702903160569840
+Key: flightNameValue: OR3008
+Key: flightNumberValue: 3008
+Key: idValue: 140709929074978940
 Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6672
-Key: prefixIATAValue: HV
-Key: prefixICAOValue: TRA
-Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[TFS], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:25:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:25:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:34:11.230+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:23:38.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[4]}
-Key: codesharesValue: {codeshares=[DL7501, KL2591]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:23:38.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T00:56:26.000+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: DL7501
-Key: flightNumberValue: 7501
-Key: idValue: 140702902568433012
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6672
-Key: prefixIATAValue: DL
-Key: prefixICAOValue: DAL
-Key: airlineCodeValue: 58
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[TFS], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:25:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:25:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:34:11.230+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:23:38.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[4]}
-Key: codesharesValue: {codeshares=[DL7501, KL2591]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:23:38.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T00:56:26.000+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: KL2591
-Key: flightNumberValue: 2591
-Key: idValue: 140702903538742546
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6672
-Key: prefixIATAValue: KL
-Key: prefixICAOValue: KLM
-Key: airlineCodeValue: 100
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[TFS], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:25:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:25:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T03:03:22.158+02:00
-Key: actualLandingTimeValue: 2024-09-22T01:03:16.000+02:00
-Key: aircraftTypeValue: {iataMain=32S, iataSub=32Q}
-Key: baggageClaimValue: {belts=[2]}
-Key: estimatedLandingTimeValue: 2024-09-22T01:03:16.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:59:13.000+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: HV6862
-Key: flightNumberValue: 6862
-Key: idValue: 140702903160575242
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6862
-Key: prefixIATAValue: HV
-Key: prefixICAOValue: TRA
-Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR, EXP]}
-Key: routeValue: {destinations=[ATH], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:25:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:25:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T01:07:12.081+02:00
-Key: actualOffBlockTimeValue: 2024-09-22T00:44:27.000+02:00
-Key: aircraftRegistrationValue: PHMPS
-Key: aircraftTypeValue: {iataMain=74F, iataSub=74Y}
-Key: flightDirectionValue: D
-Key: flightNameValue: MP6161
-Key: flightNumberValue: 6161
-Key: idValue: 140702903831505713
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: MP6161
-Key: prefixIATAValue: MP
-Key: prefixICAOValue: MPH
-Key: airlineCodeValue: 122
-Key: publicEstimatedOffBlockTimeValue: 2024-09-22T00:40:00.000+02:00
-Key: publicFlightStateValue: {flightStates=[DEP, DEL]}
-Key: routeValue: {destinations=[MIA, BOG], eu=N, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:30:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:30:00
-Key: serviceTypeValue: F
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T01:58:40.168+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:18:51.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[6]}
-Key: codesharesValue: {codeshares=[KL2588]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:18:51.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T00:55:49.000+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: HV6004
-Key: flightNumberValue: 6004
-Key: idValue: 140702903160552898
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6004
-Key: prefixIATAValue: HV
-Key: prefixICAOValue: TRA
-Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR, EXP]}
-Key: routeValue: {destinations=[OPO], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:30:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:30:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T01:58:40.168+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:18:51.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[6]}
-Key: codesharesValue: {codeshares=[KL2588]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:18:51.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T00:55:49.000+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: KL2588
-Key: flightNumberValue: 2588
-Key: idValue: 140702903538742486
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6004
-Key: prefixIATAValue: KL
-Key: prefixICAOValue: KLM
-Key: airlineCodeValue: 100
-Key: publicFlightStateValue: {flightStates=[ARR, EXP]}
-Key: routeValue: {destinations=[OPO], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:30:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:30:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:30:42.276+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:38:29.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[6]}
-Key: codesharesValue: {codeshares=[DL7509, KL2573]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:38:29.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:19:31.000+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: HV5666
-Key: flightNumberValue: 5666
-Key: idValue: 140702903160468468
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV5666
-Key: prefixIATAValue: HV
-Key: prefixICAOValue: TRA
-Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[LPA], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:30:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:30:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:30:42.276+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:38:29.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[6]}
-Key: codesharesValue: {codeshares=[DL7509, KL2573]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:38:29.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:19:31.000+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: DL7509
-Key: flightNumberValue: 7509
-Key: idValue: 140702902568433028
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV5666
-Key: prefixIATAValue: DL
-Key: prefixICAOValue: DAL
-Key: airlineCodeValue: 58
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[LPA], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:30:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:30:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:30:42.276+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:38:29.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[6]}
-Key: codesharesValue: {codeshares=[DL7509, KL2573]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:38:29.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:19:31.000+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: KL2573
-Key: flightNumberValue: 2573
-Key: idValue: 140702903538742402
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV5666
-Key: prefixIATAValue: KL
-Key: prefixICAOValue: KLM
-Key: airlineCodeValue: 100
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[LPA], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:30:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:30:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:23:09.197+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:25:56.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[19]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:25:56.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:29:46.804+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: OR3124
-Key: flightNumberValue: 3124
-Key: idValue: 140702904116073976
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: OR3124
+Key: mainFlightValue: OR3008
 Key: prefixIATAValue: OR
 Key: prefixICAOValue: TFL
 Key: airlineCodeValue: 231
-Key: publicFlightStateValue: {flightStates=[ARR, EXP]}
-Key: routeValue: {destinations=[ADB], eu=N, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:40:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:40:00
-Key: serviceTypeValue: J
-Key: terminalValue: 4
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T03:13:03.170+02:00
-Key: actualLandingTimeValue: 2024-09-22T01:06:59.000+02:00
-Key: aircraftTypeValue: {iataMain=32S, iataSub=32Q}
-Key: baggageClaimValue: {belts=[4]}
-Key: estimatedLandingTimeValue: 2024-09-22T01:06:59.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:40:12.187+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: HV5764
-Key: flightNumberValue: 5764
-Key: idValue: 140702903160471202
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV5764
-Key: prefixIATAValue: HV
-Key: prefixICAOValue: TRA
-Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR, EXP]}
-Key: routeValue: {destinations=[GRO], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:40:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:40:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:58:10.600+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:47:44.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[4]}
-Key: codesharesValue: {codeshares=[KL2526]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:47:44.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:18:36.197+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: HV5680
-Key: flightNumberValue: 5680
-Key: idValue: 140702903160468604
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV5680
-Key: prefixIATAValue: HV
-Key: prefixICAOValue: TRA
-Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[IBZ], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:55:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:55:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:58:10.600+02:00
-Key: actualLandingTimeValue: 2024-09-22T00:47:44.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[4]}
-Key: codesharesValue: {codeshares=[KL2526]}
-Key: estimatedLandingTimeValue: 2024-09-22T00:47:44.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:18:36.197+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: KL2526
-Key: flightNumberValue: 2526
-Key: idValue: 140702903538742038
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV5680
-Key: prefixIATAValue: KL
-Key: prefixICAOValue: KLM
-Key: airlineCodeValue: 100
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[IBZ], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T00:55:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 00:55:00
-Key: serviceTypeValue: J
-Key: terminalValue: 1
-Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T02:44:43.141+02:00
-Key: actualLandingTimeValue: 2024-09-22T01:09:29.000+02:00
-Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[18]}
-Key: estimatedLandingTimeValue: 2024-09-22T01:09:29.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T02:08:38.281+02:00
-Key: flightDirectionValue: A
-Key: flightNameValue: HV6642
-Key: flightNumberValue: 6642
-Key: idValue: 140702903160569618
-Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6642
-Key: prefixIATAValue: HV
-Key: prefixICAOValue: TRA
-Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[TBS], eu=N, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T01:00:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 01:00:00
+Key: publicFlightStateValue: {flightStates=[LND, EXP]}
+Key: routeValue: {destinations=[AYT], eu=N, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:30:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:30:00
 Key: serviceTypeValue: J
 Key: terminalValue: 3
 Key: schemaVersionValue: 4
-Key: lastUpdatedAtValue: 2024-09-22T03:04:08.203+02:00
-Key: actualLandingTimeValue: 2024-09-22T01:00:55.000+02:00
+Key: lastUpdatedAtValue: 2024-09-23T01:05:29.566+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:19:14.000+02:00
 Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
-Key: baggageClaimValue: {belts=[6]}
-Key: codesharesValue: {codeshares=[KL2634]}
-Key: estimatedLandingTimeValue: 2024-09-22T01:00:55.000+02:00
-Key: expectedTimeOnBeltValue: 2024-09-22T01:29:09.210+02:00
+Key: baggageClaimValue: {belts=[16]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:19:48.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:34:55.605+02:00
 Key: flightDirectionValue: A
-Key: flightNameValue: HV6148
-Key: flightNumberValue: 6148
-Key: idValue: 140702903160555940
+Key: flightNameValue: HV5766
+Key: flightNumberValue: 5766
+Key: idValue: 140709928119379048
 Key: isOperationalFlightValue: true
-Key: mainFlightValue: HV6148
+Key: mainFlightValue: HV5766
 Key: prefixIATAValue: HV
 Key: prefixICAOValue: TRA
 Key: airlineCodeValue: 164
-Key: publicFlightStateValue: {flightStates=[ARR]}
-Key: routeValue: {destinations=[ALC], eu=S, visa=false}
-Key: scheduleDateTimeValue: 2024-09-22T01:00:00.000+02:00
-Key: scheduleDateValue: 2024-09-22
-Key: scheduleTimeValue: 01:00:00
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[GRO], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:35:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:35:00
+Key: serviceTypeValue: J
+Key: terminalValue: 3
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:08:40.675+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:23:13.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[4]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:23:13.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:06:19.000+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: HV5874
+Key: flightNumberValue: 5874
+Key: idValue: 140709928119381856
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV5874
+Key: prefixIATAValue: HV
+Key: prefixICAOValue: TRA
+Key: airlineCodeValue: 164
+Key: publicFlightStateValue: {flightStates=[FIB, EXP]}
+Key: routeValue: {destinations=[SPU], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:35:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:35:00
 Key: serviceTypeValue: J
 Key: terminalValue: 1
 Key: schemaVersionValue: 4
-2024-09-22T17:31:06.984+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => TK4014 has been created.
-2024-09-22T17:31:06.985+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => AA1578 has been created.
-2024-09-22T17:31:06.986+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => LH542 has been created.
-2024-09-22T17:31:06.987+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => BA985 has been created.
-2024-09-22T17:31:06.988+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => DL4532 has been created.
-2024-09-22T17:31:06.989+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => TK863 has been created.
-2024-09-22T17:31:06.991+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => TK967 has been created.
-2024-09-22T17:31:06.992+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => KL1923 has been created.
-2024-09-22T17:31:06.993+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => AA678 has been created.
-2024-09-22T17:31:06.994+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Flight with the flightName => TK9310 has been created.
-2024-09-22T17:31:07.016+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : TK -> Airline has been added!
-2024-09-22T17:31:07.018+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : LH -> Airline has been added!
-2024-09-22T17:31:07.019+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : EK -> Airline has been added!
-2024-09-22T17:31:07.021+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : QR -> Airline has been added!
-2024-09-22T17:31:07.022+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : AA -> Airline has been added!
-2024-09-22T17:31:07.024+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : BA -> Airline has been added!
-2024-09-22T17:31:07.025+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : AF -> Airline has been added!
-2024-09-22T17:31:07.026+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : KL -> Airline has been added!
-2024-09-22T17:31:07.027+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : SQ -> Airline has been added!
-2024-09-22T17:31:07.028+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : LX -> Airline has been added!
-2024-09-22T17:31:07.028+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : JL -> Airline has been added!
-2024-09-22T17:31:07.029+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : DL -> Airline has been added!
-2024-09-22T17:31:07.030+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : SU -> Airline has been added!
-2024-09-22T17:31:07.031+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : EY -> Airline has been added!
-2024-09-22T17:31:07.032+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : CX -> Airline has been added!
-2024-09-22T17:31:07.033+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : Admin account created -> Email: ahmetcan.yalcinkaya55@gmail.com / Password: Ahmet123.
-2024-09-22T17:31:07.036+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : App Fellas user account created -> Email: user@appfellas.com / Password: APPFELLASUSER
-2024-09-22T17:31:07.037+03:00  INFO 26148 --- [AppFellas Flight API] [           main] c.appfellas.flightApi.config.AppConfig   : App Fellas admin account created -> Email: admin@appfellas.com / Password: APPFELLAS
+Key: lastUpdatedAtValue: 2024-09-23T00:38:11.537+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:28:00.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[15]}
+Key: codesharesValue: {codeshares=[KL2626]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:28:09.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:08:09.185+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: HV5754
+Key: flightNumberValue: 5754
+Key: idValue: 140709928119378970
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV5754
+Key: prefixIATAValue: HV
+Key: prefixICAOValue: TRA
+Key: airlineCodeValue: 164
+Key: publicFlightStateValue: {flightStates=[LND, EXP]}
+Key: routeValue: {destinations=[RAK], eu=N, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:40:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:40:00
+Key: serviceTypeValue: J
+Key: terminalValue: 3
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T00:38:11.537+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:28:00.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[15]}
+Key: codesharesValue: {codeshares=[KL2626]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:28:09.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:08:09.185+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: KL2626
+Key: flightNumberValue: 2626
+Key: idValue: 140709928497652618
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV5754
+Key: prefixIATAValue: KL
+Key: prefixICAOValue: KLM
+Key: airlineCodeValue: 100
+Key: publicFlightStateValue: {flightStates=[LND, EXP]}
+Key: routeValue: {destinations=[RAK], eu=N, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:40:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:40:00
+Key: serviceTypeValue: J
+Key: terminalValue: 3
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:22:03.377+02:00
+Key: actualLandingTimeValue: 2024-09-23T01:11:40.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[2]}
+Key: codesharesValue: {codeshares=[KL2522]}
+Key: estimatedLandingTimeValue: 2024-09-23T01:11:57.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:57:01.255+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: HV6338
+Key: flightNumberValue: 6338
+Key: idValue: 140709928119469184
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV6338
+Key: prefixIATAValue: HV
+Key: prefixICAOValue: TRA
+Key: airlineCodeValue: 164
+Key: publicFlightStateValue: {flightStates=[LND, EXP]}
+Key: routeValue: {destinations=[VLC], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:40:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:40:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:22:03.377+02:00
+Key: actualLandingTimeValue: 2024-09-23T01:11:40.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[2]}
+Key: codesharesValue: {codeshares=[KL2522]}
+Key: estimatedLandingTimeValue: 2024-09-23T01:11:57.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:57:01.255+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: KL2522
+Key: flightNumberValue: 2522
+Key: idValue: 140709928497649872
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV6338
+Key: prefixIATAValue: KL
+Key: prefixICAOValue: KLM
+Key: airlineCodeValue: 100
+Key: publicFlightStateValue: {flightStates=[LND, EXP]}
+Key: routeValue: {destinations=[VLC], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T00:40:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 00:40:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:28:27.488+02:00
+Key: actualLandingTimeValue: 2024-09-23T01:14:26.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[16]}
+Key: estimatedLandingTimeValue: 2024-09-23T01:13:59.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T02:02:27.247+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: OR1508
+Key: flightNumberValue: 1508
+Key: idValue: 140709929074790018
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: OR1508
+Key: prefixIATAValue: OR
+Key: prefixICAOValue: TFL
+Key: airlineCodeValue: 231
+Key: publicFlightStateValue: {flightStates=[LND]}
+Key: routeValue: {destinations=[PMI], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T01:10:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 01:10:00
+Key: serviceTypeValue: J
+Key: terminalValue: 3
+Key: schemaVersionValue: 4
+Key: lastUpdatedAtValue: 2024-09-23T01:08:20.436+02:00
+Key: actualLandingTimeValue: 2024-09-23T00:57:31.000+02:00
+Key: aircraftTypeValue: {iataMain=737, iataSub=73H}
+Key: baggageClaimValue: {belts=[4]}
+Key: codesharesValue: {codeshares=[KL2745]}
+Key: estimatedLandingTimeValue: 2024-09-23T00:57:54.000+02:00
+Key: expectedTimeOnBeltValue: 2024-09-23T01:35:18.319+02:00
+Key: flightDirectionValue: A
+Key: flightNameValue: HV6886
+Key: flightNumberValue: 6886
+Key: idValue: 140709928119483240
+Key: isOperationalFlightValue: true
+Key: mainFlightValue: HV6886
+Key: prefixIATAValue: HV
+Key: prefixICAOValue: TRA
+Key: airlineCodeValue: 164
+Key: publicFlightStateValue: {flightStates=[LND, EXP]}
+Key: routeValue: {destinations=[KEF], eu=S, visa=false}
+Key: scheduleDateTimeValue: 2024-09-23T01:15:00.000+02:00
+Key: scheduleDateValue: 2024-09-23
+Key: scheduleTimeValue: 01:15:00
+Key: serviceTypeValue: J
+Key: terminalValue: 1
+Key: schemaVersionValue: 4
 ]]></system-out>
   </testcase>
 </testsuite>
