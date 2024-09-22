@@ -1,4 +1,5 @@
 com/appfellas/flightApi/FlightApiApplication.class
+com/appfellas/flightApi/service/authentication/dto/input/AuthenticationInput.class
 com/appfellas/flightApi/service/user/repository/UserRepository.class
 com/appfellas/flightApi/core/dao/mapper/BaseCreateMapper.class
 com/appfellas/flightApi/service/user/dto/input/UserInput.class
@@ -24,12 +25,14 @@ com/appfellas/flightApi/service/airline/service/AirlineService.class
 com/appfellas/flightApi/core/security/SecurityContextUtils.class
 com/appfellas/flightApi/security/filter/JwtAuthenticationFilter.class
 com/appfellas/flightApi/service/airport/entity/Airport.class
+com/appfellas/flightApi/service/authentication/service/AuthenticationService.class
 com/appfellas/flightApi/config/CORSConfig.class
 com/appfellas/flightApi/service/flight/dto/input/FlightRouteInput.class
 com/appfellas/flightApi/service/airport/dto/input/AddressInput.class
 com/appfellas/flightApi/service/user/dto/response/UserResponse.class
 com/appfellas/flightApi/service/airline/repository/AirlineRepository.class
 com/appfellas/flightApi/service/flight/controller/FlightController.class
+com/appfellas/flightApi/service/authentication/dto/response/AuthenticationResponse.class
 com/appfellas/flightApi/security/service/JwtAuthenticationService.class
 com/appfellas/flightApi/core/dao/mapper/BaseMapper.class
 com/appfellas/flightApi/service/airport/entity/embeddable/Address.class
@@ -51,6 +54,7 @@ com/appfellas/flightApi/service/airport/repository/AirportRepository.class
 com/appfellas/flightApi/service/airline/dto/input/AirlineInput.class
 com/appfellas/flightApi/service/airline/controller/AirlineController.class
 com/appfellas/flightApi/service/user/service/UserService.class
+com/appfellas/flightApi/service/authentication/controller/AuthenticationController.class
 com/appfellas/flightApi/core/enums/FlightDirection.class
 com/appfellas/flightApi/config/AppConfig.class
 com/appfellas/flightApi/core/enums/SortDirection.class
