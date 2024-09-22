@@ -1,29 +1,39 @@
 package com.appfellas.flightApi.service.flight.controller;
 
+import com.appfellas.flightApi.core.enums.Role;
 import com.appfellas.flightApi.core.enums.SortDirection;
 import com.appfellas.flightApi.core.enums.SortProperty;
+import com.appfellas.flightApi.core.security.SecurityContextUtils;
 import com.appfellas.flightApi.service.flight.dto.input.FlightInput;
 import com.appfellas.flightApi.service.flight.dto.response.FlightResponse;
+import com.appfellas.flightApi.service.flight.entity.Flight;
 import com.appfellas.flightApi.service.flight.service.FlightService;
+import com.appfellas.flightApi.service.user.entity.User;
+import com.appfellas.flightApi.service.user.service.UserService;
 import com.appfellas.flightApi.util.EntityMapper;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
+import java.util.function.Function;
 
 @RestController
 @RequestMapping("/flight")
 public class FlightController {
 
     private final FlightService flightService;
+    private final UserService userService;
 
     @Autowired
-    public FlightController(FlightService flightService) {
+    public FlightController(FlightService flightService, UserService userService) {
         this.flightService = flightService;
+        this.userService = userService;
     }
 
     @PreAuthorize("isAnonymous()")
@@ -66,6 +76,13 @@ public class FlightController {
     @GetMapping("/filter-flights")
     public ResponseEntity<List<FlightResponse>> filterFlightByAirline(@RequestParam(name = "startDate") LocalDate startDate, @RequestParam(name = "endDate") LocalDate endDate, @RequestParam(name = "startTime") LocalTime startTime, @RequestParam(name = "endTime") LocalTime endTime, @RequestParam(name = "airline") String airlineId, @RequestParam(name = "property") String property, @RequestParam(name = "direction") String direction, @RequestParam(name = "departureAirportIATA") String departureAirportIATA, @RequestParam(name = "arrivalAirportIATA") String arrivalAirportIATA) {
         return ResponseEntity.ok().body(flightService.filterFlight(startDate, endDate, startTime, endTime, airlineId, SortProperty.valueOf(property), SortDirection.valueOf(direction), departureAirportIATA, arrivalAirportIATA).stream().map(EntityMapper::flight).toList());
+    }
+
+    @GetMapping("/users-flights")
+    public ResponseEntity<List<FlightResponse>> findAllFlightByIds() {
+        String principal = SecurityContextUtils.getPrincipal(SecurityContextHolder.getContext().getAuthentication(), Role.USER);
+        User user = userService.findById(principal);
+        return ResponseEntity.ok().body(flightService.findAllFlightByIds(user.getFlights().stream().map(Flight::getId).toList()).stream().map(EntityMapper::flight).toList());
     }
 
     @PreAuthorize("hasRole('ADMIN')")

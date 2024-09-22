@@ -44,6 +44,10 @@ public class FlightService {
         return mongoTemplate.findOne(Query.query(Criteria.where("flightName").is(name)), Flight.class);
     }
 
+    public List<Flight> findAllFlightByIds(List<String> ids) {
+        return flightRepository.findAllById(ids);
+    }
+
     public List<Flight> filterFlightByDate(LocalDate startDate, LocalDate endDate) {
         return mongoTemplate.find(Query.query(Criteria.where("scheduledDateTime")
                 .gte(LocalDateTime.of(startDate, LocalTime.MIN))

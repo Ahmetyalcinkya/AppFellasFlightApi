@@ -26,6 +26,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.DependsOn;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.util.MultiValueMap;
@@ -48,6 +50,7 @@ public class AppConfig {
     }
 
     @Bean
+    @Order(1)
     public CommandLineRunner adminCreator(@Autowired UserService userService, @Autowired UserRepository userRepository, @Autowired PasswordEncoder passwordEncoder) {
         return args -> {
             User found = userService.findByEmail("ahmetcan.yalcinkaya55@gmail.com");
@@ -67,6 +70,7 @@ public class AppConfig {
     }
 
     @Bean
+    @Order(2)
     public CommandLineRunner appFellasAdminCreator(@Autowired UserService userService, @Autowired UserRepository userRepository, @Autowired PasswordEncoder passwordEncoder) {
         return args -> {
             User found = userService.findByEmail("admin@appfellas.com");
@@ -86,6 +90,7 @@ public class AppConfig {
     }
 
     @Bean
+    @Order(3)
     public CommandLineRunner appFellasUserCreator(@Autowired UserService userService, @Autowired UserRepository userRepository, @Autowired PasswordEncoder passwordEncoder) {
         return args -> {
             User found = userService.findByEmail("user@appfellas.com");
@@ -105,6 +110,7 @@ public class AppConfig {
     }
 
     @Bean
+    @Order(4)
     public CommandLineRunner airportCreator(@Autowired AirportService airportService, @Autowired AirportRepository airportRepository) {
         return args -> {
             String[] names = {"Istanbul Airport", "Sabiha Gokcen International Airport", "Antalya Airport", "Izmir Adnan Menderes Airport", "Ankara Esenboga Airport",
@@ -141,6 +147,7 @@ public class AppConfig {
     }
 
     @Bean
+    @Order(5)
     public CommandLineRunner airlinesCreator(@Autowired AirlineService airlineService, @Autowired AirlineRepository airlineRepository) {
         return args -> {
             String[] IATACodes = {"TK", "LH", "EK", "QR", "AA", "BA", "AF", "KL", "SQ", "LX", "JL", "DL", "SU", "EY", "CX"};
@@ -170,6 +177,7 @@ public class AppConfig {
     }
 
     @Bean
+    @Order(6)
     public CommandLineRunner flightCreator(@Autowired FlightService flightService, @Autowired FlightRepository flightRepository, @Autowired AirlineService airlineService) {
         return args -> {
             LocalDateTime[] lastUpdatedAts = {LocalDateTime.of(LocalDate.now().plusDays(1), LocalTime.of(14, 30)), LocalDateTime.of(LocalDate.now().plusDays(1), LocalTime.of(18, 45)),
@@ -257,6 +265,7 @@ public class AppConfig {
     }
 
     @Bean
+    @DependsOn("flightCreator")
     public CommandLineRunner appFellasUserFlightAdder(@Autowired UserService userService, @Autowired FlightService flightService) {
         return args -> {
             User user = userService.findByEmail("user@appfellas.com");
@@ -278,6 +287,7 @@ public class AppConfig {
     }
 
     @Bean
+    @Order(7)
     public CommandLineRunner fetchFlights(@Autowired RestTemplate restTemplate, @Autowired FlightService flightService) {
         return args -> {
             String url = "https://api.schiphol.nl/public-flights/flights?includedelays=false&page=0&sort=+scheduleTime";
