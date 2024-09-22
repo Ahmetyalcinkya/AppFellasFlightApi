@@ -2,7 +2,6 @@ package com.appfellas.flightApi.config;
 
 import com.appfellas.flightApi.core.enums.FlightDirection;
 import com.appfellas.flightApi.core.enums.Role;
-import com.appfellas.flightApi.core.exception.FlightApiException;
 import com.appfellas.flightApi.service.airline.entity.Airline;
 import com.appfellas.flightApi.service.airline.repository.AirlineRepository;
 import com.appfellas.flightApi.service.airline.service.AirlineService;
@@ -18,11 +17,9 @@ import com.appfellas.flightApi.service.flight.entity.embeddable.AirCraftType;
 import com.appfellas.flightApi.service.flight.entity.embeddable.FlightRoute;
 import com.appfellas.flightApi.service.flight.repository.FlightRepository;
 import com.appfellas.flightApi.service.flight.service.FlightService;
-import com.appfellas.flightApi.service.flight.service.mapper.FlightMapper;
 import com.appfellas.flightApi.service.user.entity.User;
 import com.appfellas.flightApi.service.user.repository.UserRepository;
 import com.appfellas.flightApi.service.user.service.UserService;
-import org.bson.json.JsonObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +28,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
@@ -47,7 +43,7 @@ public class AppConfig {
     private static final Logger LOGGER = LoggerFactory.getLogger(AppConfig.class);
 
     @Bean
-    public RestTemplate restTemplate(){
+    public RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
@@ -100,7 +96,7 @@ public class AppConfig {
                 user.setEmail("user@appfellas.com");
                 user.setPassword(passwordEncoder.encode("APPFELLASUSER"));
                 user.setCreatedDateTime(LocalDateTime.now());
-                user.setRole(Role.ADMIN);
+                user.setRole(Role.USER);
                 userRepository.save(user);
             } else {
                 LOGGER.info("App Fellas user account created -> Email: {} / Password: APPFELLASUSER", found.getEmail());
@@ -203,20 +199,20 @@ public class AppConfig {
             FlightDirection[] flightDirections = {FlightDirection.A, FlightDirection.D, FlightDirection.A, FlightDirection.A, FlightDirection.A, FlightDirection.D, FlightDirection.D, FlightDirection.A, FlightDirection.D, FlightDirection.D};
             String[] flightNames = {"TK4014", "AA1578", "LH542", "BA985", "DL4532", "TK863", "TK967", "KL1923", "AA678", "TK9310"};
             int[] flightNumbers = {4014, 1578, 542, 985, 4532, 863, 967, 1923, 678, 9310};
-            LocalDateTime[] scheduledDateTimes = { LocalDateTime.of(LocalDate.now().plusDays(1), LocalTime.of(14, 0)), LocalDateTime.of(LocalDate.now().plusDays(1), LocalTime.of(18, 0)),
+            LocalDateTime[] scheduledDateTimes = {LocalDateTime.of(LocalDate.now().plusDays(1), LocalTime.of(14, 0)), LocalDateTime.of(LocalDate.now().plusDays(1), LocalTime.of(18, 0)),
                     LocalDateTime.of(LocalDate.now().plusDays(2), LocalTime.of(8, 30)), LocalDateTime.of(LocalDate.now().plusDays(2), LocalTime.of(11, 45)),
                     LocalDateTime.of(LocalDate.now().plusDays(2), LocalTime.of(14, 50)), LocalDateTime.of(LocalDate.now().plusDays(3), LocalTime.of(10, 30)),
                     LocalDateTime.of(LocalDate.now().plusDays(3), LocalTime.of(18, 40)), LocalDateTime.of(LocalDate.now().plusDays(3), LocalTime.of(5, 50)),
-                    LocalDateTime.of(LocalDate.now().plusDays(4), LocalTime.of(8, 20)), LocalDateTime.of(LocalDate.now().plusDays(4), LocalTime.of(13, 30)) };
+                    LocalDateTime.of(LocalDate.now().plusDays(4), LocalTime.of(8, 20)), LocalDateTime.of(LocalDate.now().plusDays(4), LocalTime.of(13, 30))};
 
             LocalDate[] scheduleDates = {LocalDate.now().plusDays(1), LocalDate.now().plusDays(1), LocalDate.now().plusDays(2),
                     LocalDate.now().plusDays(2), LocalDate.now().plusDays(2), LocalDate.now().plusDays(3),
-                            LocalDate.now().plusDays(3), LocalDate.now().plusDays(3), LocalDate.now().plusDays(4), LocalDate.now().plusDays(4)};
+                    LocalDate.now().plusDays(3), LocalDate.now().plusDays(3), LocalDate.now().plusDays(4), LocalDate.now().plusDays(4)};
 
-            LocalTime[] scheduleTimes = { LocalTime.of(14, 0), LocalTime.of(18, 0), LocalTime.of(8, 30),
+            LocalTime[] scheduleTimes = {LocalTime.of(14, 0), LocalTime.of(18, 0), LocalTime.of(8, 30),
                     LocalTime.of(11, 45), LocalTime.of(14, 50), LocalTime.of(10, 30),
                     LocalTime.of(18, 40), LocalTime.of(5, 50), LocalTime.of(8, 20),
-                    LocalTime.of(13, 30) };
+                    LocalTime.of(13, 30)};
             int[] capacities = {200, 250, 180, 220, 210, 230, 300, 250, 270, 240};
             int[] terminals = {1, 2, 1, 3, 2, 4, 3, 2, 1, 5};
             String[] IATACodes = {"TK", "AA", "LH", "BA", "DL", "TK", "TK", "KL", "AA", "TK"};
@@ -282,7 +278,7 @@ public class AppConfig {
     }
 
     @Bean
-    public CommandLineRunner fetchFlights(@Autowired RestTemplate restTemplate, @Autowired FlightService flightService){
+    public CommandLineRunner fetchFlights(@Autowired RestTemplate restTemplate, @Autowired FlightService flightService) {
         return args -> {
             String url = "https://api.schiphol.nl/public-flights/flights?includedelays=false&page=0&sort=+scheduleTime";
             HttpHeaders headers = new HttpHeaders();
@@ -303,7 +299,7 @@ public class AppConfig {
                     for (int i = 0; i < fetchedFlights.size(); i++) {
                         Map<String, Object> data = fetchedFlights.get(i);
                         FlightInput flightInput = new FlightInput();
-                        for (Map.Entry<String, Object> flight: data.entrySet()) {
+                        for (Map.Entry<String, Object> flight : data.entrySet()) {
                             String key = flight.getKey();
                             Object value = flight.getValue();
                             System.out.println("Key: " + key + "Value: " + value);
@@ -320,8 +316,10 @@ public class AppConfig {
                             if (key.equalsIgnoreCase("aircraftType")) {
                                 Map<String, String> aircraftType = (LinkedHashMap<String, String>) value;
                                 AirCraftTypeInput airCraftTypeInput = new AirCraftTypeInput();
-                                if (aircraftType.containsKey("iataMain")) airCraftTypeInput.setIataMain(aircraftType.get("iataMain"));
-                                if (aircraftType.containsKey("iataSub")) airCraftTypeInput.setIataSub(aircraftType.get("iataSub"));
+                                if (aircraftType.containsKey("iataMain"))
+                                    airCraftTypeInput.setIataMain(aircraftType.get("iataMain"));
+                                if (aircraftType.containsKey("iataSub"))
+                                    airCraftTypeInput.setIataSub(aircraftType.get("iataSub"));
                                 flightInput.setAirCraftType(airCraftTypeInput);
                             }
                             if (key.equalsIgnoreCase("estimatedLandingTime")) {
@@ -347,8 +345,10 @@ public class AppConfig {
                                 LocalDateTime scheduleDateTime = offsetDateTime.toLocalDateTime();
                                 flightInput.setScheduledDateTime(scheduleDateTime);
                             }
-                            if (key.equalsIgnoreCase("scheduleDate")) flightInput.setScheduleDate(LocalDate.parse((String) value));
-                            if (key.equalsIgnoreCase("scheduleTime")) flightInput.setScheduleTime(LocalTime.parse((String) value));
+                            if (key.equalsIgnoreCase("scheduleDate"))
+                                flightInput.setScheduleDate(LocalDate.parse((String) value));
+                            if (key.equalsIgnoreCase("scheduleTime"))
+                                flightInput.setScheduleTime(LocalTime.parse((String) value));
                             if (key.equalsIgnoreCase("terminal")) flightInput.setTerminal((Integer) value);
                             String[] departureAirports = {"SAW", "JFK", "MUC", "LHR", "LAX", "SAW", "IST", "AMS", "JFK", "AYT"};
                             String[] arrivalAirports = {"MUC", "DXB", "CDG", "SIN", "ZRH", "SVO", "HKG", "ESB", "SAW", "DXB"};

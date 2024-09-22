@@ -52,7 +52,8 @@ public class SecurityConfig {
         http.cors(Customizer.withDefaults());
         http.authorizeHttpRequests(registry -> {
             registry.requestMatchers(
-                    new AntPathRequestMatcher("/**", HttpMethod.GET.name())
+                    new AntPathRequestMatcher("/**", HttpMethod.GET.name()),
+                    new AntPathRequestMatcher("/**", HttpMethod.POST.name())
             ).permitAll();
             registry.anyRequest().authenticated();
         });

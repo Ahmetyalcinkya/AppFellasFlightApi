@@ -18,5 +18,5 @@ app:
   security:
     jwt:
       issuer: Ahmetyalcinkya
-      secret: HPqOh3sxPiHf_GziY_wNni9Tultx5ZE00JJXiemnCKJo33EtteGFWPGTJAukjPam
+      secret: SMvaRsPuA4q2UnCmFtGxXEVQJbfrk3Z7D5j9y6TpB8eLNWhd
       expiration-in-minutes: 1440 # 1 Day

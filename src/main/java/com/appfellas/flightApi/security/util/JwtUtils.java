@@ -30,7 +30,7 @@ public final class JwtUtils {
                 .claim(CLAIM_ROLE, user.getRole().toString())
                 .setIssuedAt(Date.from(now))
                 .setExpiration(Date.from(now.plus(Duration.ofMinutes(expirationInMinutes))))
-                .signWith(SignatureAlgorithm.ES512, secret)
+                .signWith(SignatureAlgorithm.HS512, secret)
                 .compact();
     }
 
