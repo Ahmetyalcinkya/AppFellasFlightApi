@@ -30,6 +30,7 @@ public class FlightMapper implements BaseMapper<Flight, FlightInput> {
         flight.setCapacity(329);
         flight.setFlightDirection(FlightDirection.valueOf(input.getFlightDirection()));
         flight.setFlightNumber(input.getFlightNumber());
+        flight.setFlightName(input.getFlightName());
         flight.setOperationalFlight(input.getOperationalFlight());
         flight.setAirCraftType(airCraftTypeMapper.createEntity(input.getAirCraftType()));
         Airline airline = airlineService.findByIATACode(input.getPrefixIATA());
@@ -38,6 +39,7 @@ public class FlightMapper implements BaseMapper<Flight, FlightInput> {
         airlineRepository.save(airline);
         flight.setRoute(flightRouteMapper.createEntity(input.getRoute()));
         flight.setPrice(randomPrice());
+        flight.setTerminal(input.getTerminal());
         return flight;
     }
 

@@ -307,6 +307,7 @@ public class AppConfig {
                 if (flights != null) {
                     ArrayList<Map<String, Object>> fetchedFlights = flights.get("flights");
                     for (int i = 0; i < fetchedFlights.size(); i++) {
+                        int hoursToAdd = randomIndex();
                         Map<String, Object> data = fetchedFlights.get(i);
                         FlightInput flightInput = new FlightInput();
                         for (Map.Entry<String, Object> flight : data.entrySet()) {
@@ -321,7 +322,7 @@ public class AppConfig {
                             if (key.equalsIgnoreCase("actualLandingTime")) {
                                 OffsetDateTime offsetDateTime = OffsetDateTime.parse((String) value);
                                 LocalDateTime actualLandingTime = offsetDateTime.toLocalDateTime();
-                                flightInput.setActualLandingTime(actualLandingTime);
+                                flightInput.setActualLandingTime(actualLandingTime.plusHours(hoursToAdd));
                             }
                             if (key.equalsIgnoreCase("aircraftType")) {
                                 Map<String, String> aircraftType = (LinkedHashMap<String, String>) value;
@@ -335,12 +336,12 @@ public class AppConfig {
                             if (key.equalsIgnoreCase("estimatedLandingTime")) {
                                 OffsetDateTime offsetDateTime = OffsetDateTime.parse((String) value);
                                 LocalDateTime estimatedLandingTime = offsetDateTime.toLocalDateTime();
-                                flightInput.setEstimatedLandingTime(estimatedLandingTime);
+                                flightInput.setEstimatedLandingTime(estimatedLandingTime.plusHours(hoursToAdd));
                             }
                             if (key.equalsIgnoreCase("expectedTimeOnBelt")) {
                                 OffsetDateTime offsetDateTime = OffsetDateTime.parse((String) value);
                                 LocalDateTime expectedTimeOnBelt = offsetDateTime.toLocalDateTime();
-                                flightInput.setExpectedTimeOnBelt(expectedTimeOnBelt);
+                                flightInput.setExpectedTimeOnBelt(expectedTimeOnBelt.plusHours(hoursToAdd));
                             }
                             flightInput.setFlightDirection(Math.round(Math.random() * 2) == 1 ? "D" : "A");
                             String IATACode = IATACodes[randomIndex()];
@@ -359,7 +360,8 @@ public class AppConfig {
                                 flightInput.setScheduleDate(LocalDate.parse((String) value));
                             if (key.equalsIgnoreCase("scheduleTime"))
                                 flightInput.setScheduleTime(LocalTime.parse((String) value));
-                            if (key.equalsIgnoreCase("terminal")) flightInput.setTerminal((Integer) value);
+                            if (key.equalsIgnoreCase("terminal"))
+                                flightInput.setTerminal((Integer) value);
                             String[] departureAirports = {"SAW", "JFK", "MUC", "LHR", "LAX", "SAW", "IST", "AMS", "JFK", "AYT"};
                             String[] arrivalAirports = {"MUC", "DXB", "CDG", "SIN", "ZRH", "SVO", "HKG", "ESB", "SAW", "DXB"};
                             FlightRouteInput flightRouteInput = new FlightRouteInput();
