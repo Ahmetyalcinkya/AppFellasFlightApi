@@ -11,7 +11,6 @@ import com.appfellas.flightApi.service.flight.service.FlightService;
 import com.appfellas.flightApi.service.user.entity.User;
 import com.appfellas.flightApi.service.user.service.UserService;
 import com.appfellas.flightApi.util.EntityMapper;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
-import java.util.function.Function;
 
 @RestController
 @RequestMapping("/flight")
@@ -36,48 +34,42 @@ public class FlightController {
         this.userService = userService;
     }
 
-    @PreAuthorize("isAnonymous()")
     @GetMapping("/all")
     public ResponseEntity<List<FlightResponse>> getAllFlights() {
         return ResponseEntity.ok().body(flightService.findAll().stream().map(EntityMapper::flight).toList());
     }
 
-    @PreAuthorize("isAnonymous()")
     @GetMapping("/{id}")
     public ResponseEntity<FlightResponse> getFlightById(@PathVariable String id) {
         return ResponseEntity.ok().body(EntityMapper.flight(flightService.findById(id)));
     }
 
-    @PreAuthorize("isAnonymous()")
     @GetMapping("/name")
     public ResponseEntity<FlightResponse> getFlightByName(@RequestParam(name = "name") String name) {
         return ResponseEntity.ok().body(EntityMapper.flight(flightService.findByFlightName(name)));
     }
 
-    @PreAuthorize("isAnonymous()")
     @GetMapping("/filter-date-between")
     public ResponseEntity<List<FlightResponse>> filterFlightByDate(@RequestParam(name = "start") LocalDate startDate, @RequestParam(name = "end") LocalDate endDate) {
         return ResponseEntity.ok().body(flightService.filterFlightByDate(startDate, endDate).stream().map(EntityMapper::flight).toList());
     }
 
-    @PreAuthorize("isAnonymous()")
     @GetMapping("/filter-time-between")
     public ResponseEntity<List<FlightResponse>> filterFlightByTime(@RequestParam(name = "start") LocalTime startDate, @RequestParam(name = "end") LocalTime endDate) {
         return ResponseEntity.ok().body(flightService.filterFlightByTime(startDate, endDate).stream().map(EntityMapper::flight).toList());
     }
 
-    @PreAuthorize("isAnonymous()")
     @GetMapping("/filter-airline/{id}")
     public ResponseEntity<List<FlightResponse>> filterFlightByAirline(@PathVariable String id) {
         return ResponseEntity.ok().body(flightService.filterFlightByAirline(id).stream().map(EntityMapper::flight).toList());
     }
 
-    @PreAuthorize("isAnonymous()")
     @GetMapping("/filter-flights")
-    public ResponseEntity<List<FlightResponse>> filterFlightByAirline(@RequestParam(name = "startDate") LocalDate startDate, @RequestParam(name = "endDate") LocalDate endDate, @RequestParam(name = "startTime") LocalTime startTime, @RequestParam(name = "endTime") LocalTime endTime, @RequestParam(name = "airline") String airlineId, @RequestParam(name = "property") String property, @RequestParam(name = "direction") String direction, @RequestParam(name = "departureAirportIATA") String departureAirportIATA, @RequestParam(name = "arrivalAirportIATA") String arrivalAirportIATA) {
+    public ResponseEntity<List<FlightResponse>> filterFlights(@RequestParam(name = "startDate") String startDate, @RequestParam(name = "endDate") String endDate, @RequestParam(name = "startTime") String startTime, @RequestParam(name = "endTime") String endTime, @RequestParam(name = "airline") String airlineId, @RequestParam(name = "property") String property, @RequestParam(name = "direction") String direction, @RequestParam(name = "departureAirportIATA") String departureAirportIATA, @RequestParam(name = "arrivalAirportIATA") String arrivalAirportIATA) {
         return ResponseEntity.ok().body(flightService.filterFlight(startDate, endDate, startTime, endTime, airlineId, SortProperty.valueOf(property), SortDirection.valueOf(direction), departureAirportIATA, arrivalAirportIATA).stream().map(EntityMapper::flight).toList());
     }
 
+    @PreAuthorize("hasRole('USER')")
     @GetMapping("/users-flights")
     public ResponseEntity<List<FlightResponse>> findAllFlightByIds() {
         String principal = SecurityContextUtils.getPrincipal(SecurityContextHolder.getContext().getAuthentication(), Role.USER);

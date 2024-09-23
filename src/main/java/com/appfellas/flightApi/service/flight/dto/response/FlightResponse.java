@@ -6,7 +6,6 @@ import com.appfellas.flightApi.service.flight.entity.embeddable.FlightRoute;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.List;
 import java.util.Set;
 
 public class FlightResponse {

@@ -51,9 +51,9 @@ public class EntityMapper {
         flightResponse.setEstimatedLandingTime(flight.getEstimatedLandingTime());
         flightResponse.setExpectedTimeOnBelt(flight.getExpectedTimeOnBelt());
         flightResponse.setFlightDirection(flight.getFlightDirection());
-        flightResponse.setFlightName(flightResponse.getFlightName());
-        flightResponse.setFlightNumber(flightResponse.getFlightNumber());
-        flightResponse.setOperationalFlight(flightResponse.getOperationalFlight());
+        flightResponse.setFlightName(flight.getFlightName());
+        flightResponse.setFlightNumber(flight.getFlightNumber());
+        flightResponse.setOperationalFlight(flight.getOperationalFlight());
         flightResponse.setScheduledDateTime(flight.getScheduledDateTime());
         flightResponse.setScheduleDate(flight.getScheduleDate());
         flightResponse.setScheduleTime(flight.getScheduleTime());

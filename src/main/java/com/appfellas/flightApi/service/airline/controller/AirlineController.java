@@ -22,7 +22,6 @@ public class AirlineController {
         this.airlineService = airlineService;
     }
 
-    @PreAuthorize("isAnonymous()")
     @GetMapping("/all")
     public ResponseEntity<List<AirlineResponse>> getAllAirlines(){
         return ResponseEntity.ok().body(airlineService.findAll().stream().map(EntityMapper::airline).toList());
@@ -34,7 +33,6 @@ public class AirlineController {
         return ResponseEntity.ok().body(EntityMapper.airline(airlineService.findById(id)));
     }
 
-    @PreAuthorize("isAuthenticated()")
     @GetMapping("/IATACode")
     public ResponseEntity<AirlineResponse> getAirlineByIATACode(@RequestParam(name = "code") String code) {
         return ResponseEntity.ok().body(EntityMapper.airline(airlineService.findByIATACode(code)));

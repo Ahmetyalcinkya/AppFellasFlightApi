@@ -6,6 +6,7 @@ import com.appfellas.flightApi.service.flight.dto.input.FlightInput;
 import com.appfellas.flightApi.service.flight.entity.Flight;
 import com.appfellas.flightApi.service.flight.repository.FlightRepository;
 import com.appfellas.flightApi.service.flight.service.mapper.FlightMapper;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.mongodb.core.MongoTemplate;
@@ -61,50 +62,59 @@ public class FlightService {
     }
 
     public List<Flight> filterFlightByAirline(String airlineId) {
-        return mongoTemplate.find(Query.query(Criteria.where("airline.$id").is(airlineId).and("isOperationalFlight").is(false)), Flight.class);
+        return mongoTemplate.find(Query.query(Criteria.where("airline.id").is(airlineId).and("isOperationalFlight").is(false)), Flight.class);
     }
 
-    public List<Flight> filterFlight(LocalDate startDate, LocalDate endDate, LocalTime startTime, LocalTime endTime, String airlineId, SortProperty sortProperty, SortDirection sortDirection, String departureAirportIATA ,String arrivalAirportIATA) {
+    public List<Flight> filterFlight(String startDate, String endDate, String startTime, String endTime, String airlineId, SortProperty sortProperty, SortDirection sortDirection, String departureAirportIATA ,String arrivalAirportIATA) {
         Criteria criteria = new Criteria();
-        if (startDate != null && endDate != null) {
-            if (startDate.isAfter(endDate)) {
+        if (!StringUtils.isAllBlank(startDate, endDate)) {
+            LocalDate startingDate = LocalDate.parse(startDate);
+            LocalDate endingDate = LocalDate.parse(endDate);
+            if (startingDate.isAfter(endingDate)) {
                 throw new RuntimeException("End date cannot smaller than start date");
             }
-            if (startTime != null && endTime != null) {
-                if (startTime.isAfter(endTime)) {
+            if (!StringUtils.isAllBlank(startTime, endTime)) {
+                LocalTime startingTime = LocalTime.parse(startTime);
+                LocalTime endingTime = LocalTime.parse(endTime);
+                if (startingTime.isAfter(endingTime)) {
                     throw new RuntimeException("End time cannot smaller than start time");
                 }
                 criteria = criteria.and("scheduledDateTime")
-                        .gte(LocalDateTime.of(startDate, startTime))
-                        .lte(LocalDateTime.of(endDate, endTime));
+                        .gte(LocalDateTime.of(startingDate, startingTime))
+                        .lte(LocalDateTime.of(endingDate, endingTime));
             } else {
                 criteria = criteria.and("scheduledDateTime")
-                        .gte(LocalDateTime.of(startDate, LocalTime.MIN))
-                        .lte(LocalDateTime.of(endDate, LocalTime.MAX));
+                        .gte(LocalDateTime.of(startingDate, LocalTime.MIN))
+                        .lte(LocalDateTime.of(endingDate, LocalTime.MAX));
             }
         } else {
-            if (startTime != null && endTime != null) {
-                if (startTime.isAfter(endTime)) {
+            if (!StringUtils.isAllBlank(startTime, endTime)) {
+                LocalTime startingTime = LocalTime.parse(startTime);
+                LocalTime endingTime = LocalTime.parse(endTime);
+                if (startingTime.isAfter(endingTime)) {
                     throw new RuntimeException("End time cannot smaller than start time");
                 }
                 criteria = criteria.and("scheduledDateTime")
-                        .gte(LocalDateTime.of(LocalDate.now(), startTime))
-                        .lte(LocalDateTime.of(LocalDate.now(), endTime));
+                        .gte(LocalDateTime.of(LocalDate.now(), startingTime))
+                        .lte(LocalDateTime.of(LocalDate.now(), endingTime));
             }
         }
         if (airlineId != null && !airlineId.isEmpty()) {
-            criteria = criteria.and("airline.$id").is(airlineId);
+            criteria = criteria.and("airline.id").is(airlineId);
         }
-        if (departureAirportIATA != null && arrivalAirportIATA != null) {
+        if (!StringUtils.isAllBlank(departureAirportIATA, arrivalAirportIATA)) {
             criteria = criteria.and("route.departureIATACode").is(departureAirportIATA).and("route.arrivalIATACode").is(arrivalAirportIATA);
-        } else if (departureAirportIATA != null && arrivalAirportIATA == null) {
+        } else if (StringUtils.isNotBlank(departureAirportIATA) && StringUtils.isBlank(arrivalAirportIATA)) {
             criteria = criteria.and("route.departureIATACode").is(departureAirportIATA);
-        } else if (departureAirportIATA == null && arrivalAirportIATA != null) {
+        } else if (StringUtils.isBlank(departureAirportIATA) && StringUtils.isNotBlank(arrivalAirportIATA)) {
             criteria = criteria.and("route.arrivalIATACode").is(arrivalAirportIATA);
         }
-        Sort.Direction direction = Sort.Direction.valueOf(sortDirection.name());
-        Sort sort = Sort.by(direction, sortProperty == null ? "scheduledDateTime" : "price");
-        return mongoTemplate.find(Query.query(criteria.and("isOperationalFlight").is(false)).with(sort), Flight.class);
+        if (sortDirection != null) {
+            Sort.Direction direction = Sort.Direction.valueOf(sortDirection.name());
+            Sort sort = Sort.by(direction, sortProperty == null ? "scheduledDateTime" : "price");
+            return mongoTemplate.find(Query.query(criteria.and("isOperationalFlight").is(false)).with(sort), Flight.class);
+        }
+        return mongoTemplate.find(Query.query(criteria.and("isOperationalFlight").is(false)), Flight.class);
     }
 
     public void save(FlightInput input) {
