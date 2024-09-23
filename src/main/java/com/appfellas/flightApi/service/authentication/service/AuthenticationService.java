@@ -41,7 +41,7 @@ public class AuthenticationService {
         return user != null;
     }
 
-    private AuthenticationResponse generateAuthenticationResponse(User user){
+    public AuthenticationResponse generateAuthenticationResponse(User user){
         AuthenticationResponse response = new AuthenticationResponse();
         response.setId(user.getId());
         response.setFirstName(user.getFirstName());
