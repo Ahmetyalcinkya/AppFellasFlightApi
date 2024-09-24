@@ -50,14 +50,17 @@ AppConfig.java içerisinde bulunan fetchFlights metodu case içerisinde verilen 
 
 # Sistem Tarafından Hazır Olarak Eklenen Kullanıcılar :
 ROLE: ADMIN
+
 Email: ahmetcan.yalcinkaya55@gmail.com
 Şifre: Ahmet123.
 
 ROLE: ADMIN
+
 Email admin@appfellas.com
 Şifre: APPFELLAS
 
 ROLE: USER
+
 Email: user@appfellas.com
 Şifre: APPFELLASUSER
 
