@@ -64,6 +64,7 @@ ROLE: USER
 Email: user@appfellas.com
 Şifre: APPFELLASUSER
 
+Uygulama içerisindeki tüm endpointlere http://localhost:8080/AppFellas/api/v1/swagger-ui/index.html adresinden erişebilirsiniz.
 
 https://github.com/Ahmetyalcinkya/AppFellasFlightApiFE adresinde bulunan FrontEnd projesinden veya Postman üzerinden uygulamaya istek gönderebilirsiniz.
 
