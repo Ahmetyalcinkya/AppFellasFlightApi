@@ -24,12 +24,15 @@ Projeyi çalıştırmak için gerekli olan yazılımların listesi:
   sudo systemctl start mongod komutu ile mongodb sunucunuzu başlatınız.
   tekrardan sudo systemctl status mongod komutu ile sunucu durumunu kontrol ediniz. active(running) ifadesini görüyorsanız mongo sunucunuz çalışır duruma geçmiştir.
   https://www.mongodb.com/try/download/shell adresine gidiniz.
-  
+  ![Screenshot from 2024-09-24 14-11-51](https://github.com/user-attachments/assets/f4057d93-8684-4dde-922f-8f145d4d55e2)
+
   MongoDB Shell Download kısmından indirmeyi başlatınız.
   Yeni bir terminalinizi açınız.
   sudo dpkg -i mongodb-mongosh_1.8.2_amd64.deb komutunu çalıştırınız.
   mongosh komutu ile shell durumunu kontrol ediniz.
   https://www.mongodb.com/try/download/compass adresine gidiniz.
+  ![Screenshot from 2024-09-24 14-11-59](https://github.com/user-attachments/assets/7fe633ca-7da8-4e8a-a78d-f9152ad20161)
+
   MongoDB Compass Download (GUI) kısmından indirmeyi başlatınız.
   sudo dpkg -i mongodb-compass_1.36.4_amd64.deb komutunu çalıştırınız.
   Tebrikler. MongoDb sunucunuz artık çalışıyor.
